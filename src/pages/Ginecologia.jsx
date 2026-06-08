@@ -4,31 +4,31 @@ import './PackagePage.css'
 import FAQ from './FAQ'
 
 const BENEFITS = [
-  { icon: '🌸', bg: '#fde8ee', title: 'Consulta ginecológica', desc: 'Atención preventiva y diagnóstica integral para la salud femenina en todas las etapas de la vida.' },
-  { icon: '🤰', bg: '#d0f4ea', title: 'Control prenatal', desc: 'Seguimiento completo del embarazo con ecografías, controles periódicos y acompañamiento personalizado.' },
-  { icon: '🔬', bg: '#d4f0df', title: 'Citología cervicovaginal', desc: 'Examen de Papanicolau para detección temprana del cáncer de cuello uterino. Recomendado anualmente.' },
-  { icon: '💊', bg: '#ede9fe', title: 'Planificación familiar', desc: 'Asesoría y gestión de métodos anticonceptivos adaptados a tu situación de vida y necesidades.' },
-  { icon: '🌡️', bg: '#fef9c3', title: 'Menopausia y climaterio', desc: 'Manejo integral de los síntomas de la menopausia con tratamientos hormonales y no hormonales.' },
-  { icon: '🩺', bg: '#e0f7ef', title: 'Colposcopía', desc: 'Examen visual del cuello uterino con colposcopio para evaluación de lesiones anormales detectadas en citología.' },
+  { icon: '🌸', bg: '#fde8ee', title: 'Consulta ginecológica', desc: 'Valoración especializada para prevención, diagnóstico y seguimiento de la salud femenina.' },
+  { icon: '🤰', bg: '#d0f4ea', title: 'Control prenatal', desc: 'Acompañamiento durante el embarazo con controles, ecografías y seguimiento profesional.' },
+  { icon: '🧪', bg: '#d4f0df', title: 'Citología cervicovaginal', desc: 'Examen preventivo para detección temprana y control de la salud cervical.' },
+  { icon: '💊', bg: '#ede9fe', title: 'Planificación familiar', desc: 'Asesoría personalizada en métodos anticonceptivos y salud reproductiva.' },
+  { icon: '✨', bg: '#fef9c3', title: 'Menopausia y climaterio', desc: 'Manejo y acompañamiento de cambios hormonales y síntomas de menopausia.' },
+  { icon: '🔎', bg: '#e0f7ef', title: 'Colposcopía', desc: 'Evaluación especializada del cuello uterino para seguimiento y prevención ginecológica.' },
 ]
 
 const SERVICES = [
   { servicio: 'Consulta ginecológica general', tiempo: '30 min', descuento: 'Hasta 50%' },
-  { servicio: 'Citología cervicovaginal', tiempo: '20 min', descuento: 'Hasta 50%' },
-  { servicio: 'Control prenatal', tiempo: '30 min', descuento: 'Hasta 45%' },
-  { servicio: 'Ecografía obstétrica', tiempo: '30 min', descuento: 'Hasta 45%' },
+  { servicio: 'Citología cervicovaginal', tiempo: '20 min', descuento: 'Hasta 35%' },
+  { servicio: 'Control prenatal', tiempo: '30 min', descuento: 'Hasta 40%' },
+  { servicio: 'Ecografía obstétrica', tiempo: '30 min', descuento: 'Hasta 40%' },
   { servicio: 'Colposcopía', tiempo: '30 min', descuento: 'Hasta 40%' },
   { servicio: 'Inserción de DIU', tiempo: '30 min', descuento: 'Hasta 40%' },
-  { servicio: 'Consulta de menopausia', tiempo: '40 min', descuento: 'Hasta 45%' },
+  { servicio: 'Consulta de menopausia', tiempo: '40 min', descuento: 'Hasta 35%' },
   { servicio: 'Biopsia endometrial', tiempo: '30 min', descuento: 'Hasta 35%' },
 ]
 
 const FAQS = [
-  { q: '¿Desde qué edad debo visitar al ginecólogo?', a: 'Se recomienda la primera visita ginecológica entre los 13 y 15 años, o al inicio de la actividad sexual. A partir de los 21 años se recomienda una consulta anual con citología cervicovaginal.' },
-  { q: '¿Cómo debo prepararme para la consulta ginecológica?', a: 'Evita relaciones sexuales 48 horas antes si se va a realizar citología. No uses cremas vaginales ni duchas vaginales los días previos. Trata de no estar en periodo menstrual para la citología.' },
+  { q: '¿Desde qué edad debo visitar al ginecólogo?', a: 'La primera consulta ginecológica se recomienda entre los 13 y 15 años, o al iniciar la vida sexual. A partir de los 21 años, es importante realizar controles periódicos y citología según la orientación del especialista.' },
+  { q: '¿Cómo debo prepararme para la consulta ginecológica?', a: 'Para una consulta general no necesitas una preparación especial. Si vas a realizarte una citología, evita relaciones sexuales, cremas vaginales o duchas vaginales 48 horas antes, y procura no estar en tu periodo menstrual.' },
   { q: '¿Con qué frecuencia debo hacerme la citología?', a: 'Se recomienda una vez al año para mujeres entre 21 y 65 años. Si tienes resultados normales continuos, tu ginecólogo puede indicar realizarla cada 3 años con citología sola o cada 5 años con cotesting (citología más VPH).' },
-  { q: '¿El control prenatal está cubierto por los planes Cedima?', a: 'Sí. Las consultas de control prenatal y las ecografías obstétricas tienen descuentos de hasta el 45% para miembros de todos los planes Cedima. El plan Elite incluye además $800.000 en servicios que pueden usarse para el control prenatal.' },
-  { q: '¿Atienden partos en Cedima?', a: 'Actualmente Cedima ofrece consultas, controles prenatales y procedimientos ambulatorios ginecológicos. Para la atención del parto, trabajamos con clínicas aliadas donde nuestros descuentos también aplican. Consulta con tu ginecóloga sobre las opciones disponibles.' },
+  { q: '¿Puedo acceder a servicios ginecológicos sin EPS?', a: 'Sí. En Cedima IPS puedes acceder a consultas y procedimientos ginecológicos de forma particular, sin largas esperas ni trámites complicados.' },
+  { q: '¿Atienden partos en Cedima?', a: 'No. Actualmente en Cedima IPS no realizamos atención de partos. Sin embargo, contamos con consultas ginecológicas, controles prenatales y procedimientos especializados para el cuidado de la salud femenina.' },
 ]
 
 export default function Ginecologia() {
@@ -55,10 +55,10 @@ export default function Ginecologia() {
                 <em>Ginecología</em> y Salud Femenina
               </h1>
               <p className="pkg-hero__desc">
-                Acompañamos a la mujer en cada etapa de su vida. Desde la adolescencia hasta la menopausia, nuestras ginecólogas certificadas ofrecen atención preventiva, diagnóstica y de seguimiento con calidez y profesionalismo.
+                Te acompañamos con una atención ginecológica clara, humana y profesional, pensada para cuidar tu bienestar desde la adolescencia hasta la menopausia.
               </p>
               <div className="pkg-hero__actions">
-                <a href="#contacto" className="btn btn-primary">Agendar cita</a>
+                <a href="#contacto" className="btn btn-primary">Agendar consulta</a>
                 <a href="#servicios" className="btn btn-outline">Ver servicios</a>
               </div>
             </div>
@@ -72,7 +72,7 @@ export default function Ginecologia() {
               </div>
               <div className="pkg-price-card__divider" />
               <p className="pkg-price-card__includes">Destacados</p>
-              {['Consulta ginecológica integral', 'Citología y colposcopía', 'Control prenatal y ecografías', 'Planificación familiar', 'Manejo de menopausia y climaterio'].map(f => (
+              {['Atención ginecológica integral', 'Prevención y diagnóstico femenino', 'Seguimiento prenatal especializado', 'Salud hormonal y menopausia', 'Beneficios exclusivos con Plan Cedima'].map(f => (
                 <div key={f} className="pkg-price-card__feature">
                   <div className="pkg-price-card__check" style={{ background: '#fde8ee' }}>
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#9f1239" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -107,7 +107,7 @@ export default function Ginecologia() {
         <div className="container">
           <p className="pkg-section__label">Tarifas</p>
           <h2 className="pkg-section__title">Servicios disponibles</h2>
-          <p className="pkg-section__sub">Todos los procedimientos ginecológicos con descuentos para miembros de los planes Cedima.</p>
+          <p className="pkg-section__sub">Consulta nuestros servicios ginecológicos y accede a beneficios especiales con el Plan Cedima.</p>
           <div className="pkg-table-wrap">
             <table className="pkg-table">
               <thead>
@@ -130,7 +130,7 @@ export default function Ginecologia() {
       <section className="pkg-section">
         <div className="container">
           <p className="pkg-section__label">Preguntas frecuentes</p>
-          <h2 className="pkg-section__title">Resolvemos tus dudas</h2>
+          <h2 className="pkg-section__title">Estamos para orientarte</h2>
           <p className="pkg-section__sub">Información importante antes de tu consulta ginecológica.</p>
           <FAQ items={FAQS} />
         </div>
@@ -139,8 +139,8 @@ export default function Ginecologia() {
       <div className="container" id="contacto">
         <div className="pkg-cta">
           <div className="pkg-cta__text">
-            <h3 className="pkg-cta__title">Tu salud femenina es prioridad 🌸</h3>
-            <p className="pkg-cta__sub">Agenda tu consulta ginecológica con nuestras especialistas certificadas.</p>
+            <h3 className="pkg-cta__title">Tu salud merece atención especializada 💖</h3>
+            <p className="pkg-cta__sub">Agenda tu consulta ginecológica con un equipo profesional que te acompaña en cada etapa.</p>
           </div>
           <div className="pkg-cta__actions">
             <a href="tel:+57000000000" className="btn btn-white">Llamar ahora</a>

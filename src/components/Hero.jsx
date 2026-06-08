@@ -34,23 +34,23 @@ export default function Hero() {
                   </svg>
                 </div>
                 <div>
-                  <p className="hero__card-name">Dra. Sara Hidalgo</p>
-                  <p className="hero__card-role">Specialista en Radiografía</p>
+                  <p className="hero__card-name">Dra. Catalina Garcia</p>
+                  <p className="hero__card-role">Especialista en Medicina Interna</p>
                 </div>
                 <span className="hero__online-dot" />
               </div>
               <p className="hero__card-msg">
-                "Your latest results look great! Let's schedule a follow-up to discuss your care plan."
+                "Tus resultados están listos. Podemos agendar tu control esta misma semana."
               </p>
-              <div className="hero__card-time">Just now · Video call available</div>
+              <div className="hero__card-time">📍 Citas médicas ágiles en Cali</div>
             </div>
 
             {/* Floating stat card */}
             <div className="hero__card hero__card--stat hero__card--stat-1">
-              <div className="hero__stat-icon">↓</div>
+              <div className="hero__stat-icon">📅</div>
               <div>
-                <strong>27% lower</strong>
-                <span>NICU admissions</span>
+                <strong>Atención rápida</strong>
+                <span>Citas médicas en pocos días</span>
               </div>
             </div>
 
@@ -59,7 +59,7 @@ export default function Hero() {
               <div className="hero__stat-icon hero__stat-icon--purple">★</div>
               <div>
                 <strong>4.9 / 5</strong>
-                <span>member satisfaction</span>
+                <span>Satisfacción de pacientes</span>
               </div>
             </div>
           </div>

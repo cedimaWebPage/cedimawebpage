@@ -3,24 +3,24 @@ import './Testimonials.css'
 
 const TESTIMONIALS = [
   {
-    quote: "We had amazing emotional support and saved around £30,000 we were going to spend on IVF. The only difference was CarePath. We didn't do anything else, and now we're pregnant.",
-    name: 'Han',
-    role: 'Member via Microsoft',
-    initials: 'H',
+    quote: "Pude agendar mi cita con especialista en pocos días y la atención fue excelente desde el inicio. Todo el proceso fue mucho más rápido de lo que esperaba.",
+    name: 'Laura M.',
+    role: 'Paciente Cedima IPS',
+    initials: 'LM',
     color: '#1d7a4a',
   },
   {
-    quote: "This is by far the easiest access to services and specialists I've experienced in seven years of my family-building journey. I feel very supported and never have to wait weeks for a next appointment.",
-    name: 'Sarah',
-    role: 'Member via Amazon',
-    initials: 'S',
+    quote: "Excelente atención y especialistas muy profesionales.",
+    name: 'María G.',
+    role: 'Paciente Cedima IPS',
+    initials: 'MG',
     color: '#0ea5e9',
   },
   {
-    quote: "CarePath is deeply personal to me. From second opinions on fertility treatment to nutrition advice during IVF, and childbirth education — it's been the constant and trusted companion through a challenging time.",
-    name: 'Mairead',
-    role: 'Head of Talent, Vynamic',
-    initials: 'M',
+    quote: "El Plan Familiar nos ayudó muchísimo con consultas y descuentos.",
+    name: 'Carlos R.',
+    role: 'Paciente Cedima IPS',
+    initials: 'CR',
     color: '#7c3aed',
   },
 ]
@@ -33,12 +33,12 @@ export default function Testimonials() {
     <section className="testimonials section section--cream" id="stories">
       <div className="container">
         <div className="testimonials__header">
-          <span className="tag">Member stories</span>
+          <span className="tag">EXPERIENCIAS CEDIMA</span>
           <h2>
-            Real <span className="text-green italic">stories</span> from our members
+            Historias reales de <span className="text-green italic">  nuestros pacientes</span> 
           </h2>
           <p className="text-soft" style={{ maxWidth: 480, fontSize: '1.05rem', lineHeight: 1.7 }}>
-            Discover how our personalized healthcare platform has transformed the lives of women and families worldwide.
+            Conoce cómo Cedima IPS acompaña a familias en Cali con atención médica más cercana, rápida y accesible.
           </p>
         </div>
 

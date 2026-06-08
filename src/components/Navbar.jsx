@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { href, Link } from 'react-router-dom'
 import './Navbar.css'
 
 const NAV_LINKS = [
@@ -13,19 +13,21 @@ const NAV_LINKS = [
   {
     label: 'Programas',
     children: [
-      { label: 'Cedima Familiar', href: 'paquete-familiar' },
-      { label: 'Cedima Medico', href: 'paquete-medico' },
-      { label: 'Medico Familiar VIP', href: 'paquete-vip' },
-      { label: 'Salud Elite', href: 'paquete-elite' },
+      { label: 'Plan Asistencial Familiar', href: 'paquete-familiar' },
+      { label: 'Plan Asistencial Individual', href: 'paquete-medico' },
+      { label: 'Plan Asistencial Integral', href: 'paquete-vip' },
+      { label: 'Plan Asistencial de Salud Elite', href: 'paquete-elite' },
     ],
   },
   {
     label: 'Servicios',
     children: [
-      { label: 'Radiologia', href: '/servicios/radiologia' },
-      { label: 'Dermatologia', href: '/servicios/dermatologia' },
-      { label: 'Optometria', href: '/servicios/optometria' },
+      { label: 'Imágenes Diagnósticas', href: '/servicios/radiologia' },
+      { label: 'Consulta Especializada', href: '/servicios/dermatologia'},
+      { label: 'Procedimientos', href: '/servicios/optometria' },
       { label: 'Ginecologia', href: '/servicios/ginecologia' },
+      { label: 'Cirugia Programada', href: '/servicios/cirugia-programada'},
+
     ],
   }
 ]

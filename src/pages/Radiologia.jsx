@@ -4,28 +4,26 @@ import './PackagePage.css'
 import FAQ from './FAQ'
 
 const BENEFITS = [
-  { icon: '🫁', bg: '#d0f4ea', title: 'Radiografías digitales', desc: 'Imágenes de alta resolución con tecnología digital para diagnósticos más precisos y rápidos.' },
-  { icon: '🧲', bg: '#d4f0df', title: 'Resonancia magnética', desc: 'Imágenes detalladas de tejidos blandos, articulaciones y órganos internos sin radiación.' },
-  { icon: '🔬', bg: '#ede9fe', title: 'Tomografía computarizada', desc: 'Escaneos en cortes transversales del cuerpo para detectar anomalías con alta precisión.' },
-  { icon: '📡', bg: '#fde8ee', title: 'Ecografía', desc: 'Imágenes en tiempo real usando ultrasonido, sin radiación, ideal para seguimiento de embarazo y órganos.' },
-  { icon: '🦴', bg: '#fef9c3', title: 'Densitometría ósea', desc: 'Medición de la densidad mineral ósea para diagnóstico y seguimiento de osteoporosis.' },
-  { icon: '⚡', bg: '#e0f7ef', title: 'Resultados en línea', desc: 'Accede a tus resultados e imágenes digitalmente desde cualquier dispositivo el mismo día.' },
+  { icon: '🩻', bg: '#d0f4ea', title: 'Radiografías', desc: 'Estudios rápidos y precisos para apoyar la valoración médica de huesos, tórax y otras zonas del cuerpo.' },
+  { icon: '🤰', bg: '#d4f0df', title: 'Ecografía', desc: 'Imágenes en tiempo real, sin radiación, ideales para valoración abdominal, ginecológica, obstétrica y otros controles médicos.' },
+  { icon: '🩷', bg: '#ede9fe', title: 'Mamografía', desc: 'Estudio especializado para la detección y seguimiento oportuno de alteraciones en el tejido mamario.' },
+  { icon: '🖥️', bg: '#fde8ee', title: 'Tomografía TAC', desc: 'Imágenes detalladas del cuerpo para apoyar diagnósticos médicos con mayor claridad.' },
+  { icon: '🧲', bg: '#fef9c3', title: 'Resonancia magnética', desc: 'Estudios especializados por convenio para obtener imágenes detalladas de órganos, tejidos y articulaciones.' },
+  { icon: '⚡', bg: '#e0f7ef', title: 'Resultados Inmediatos', desc: 'No tienes que esperar varios días para avanzar con tu diagnóstico. En Cedima IPS recibes tus resultados en 24 horas.' },
 ]
 
 const SERVICES = [
   { servicio: 'Radiografía simple', tiempo: '15 min', descuento: 'Hasta 50%' },
-  { servicio: 'Ecografía abdominal', tiempo: '30 min', descuento: 'Hasta 45%' },
-  { servicio: 'Ecografía obstétrica', tiempo: '30 min', descuento: 'Hasta 45%' },
+  { servicio: 'Ecografía abdominal', tiempo: '15 min', descuento: 'Hasta 45%' },
+  { servicio: 'Ecografía obstétrica', tiempo: '15 min', descuento: 'Hasta 45%' },
   { servicio: 'Tomografía (TAC)', tiempo: '45 min', descuento: 'Hasta 40%' },
   { servicio: 'Resonancia magnética', tiempo: '60 min', descuento: 'Hasta 40%' },
   { servicio: 'Densitometría ósea', tiempo: '20 min', descuento: 'Hasta 35%' },
-  { servicio: 'Mamografía', tiempo: '20 min', descuento: 'Hasta 50%' },
-  { servicio: 'Fluoroscopía', tiempo: '30 min', descuento: 'Hasta 35%' },
-]
+  { servicio: 'Mamografía', tiempo: '20 min', descuento: 'Hasta 50%' },]
 
 const FAQS = [
-  { q: '¿Necesito una orden médica para realizarme un examen radiológico?', a: 'La mayoría de los exámenes requieren una orden médica. Sin embargo, algunos como la ecografía abdominal pueden realizarse de forma particular sin orden. Consulta con nuestro equipo para más información.' },
-  { q: '¿Cuánto tiempo tardan los resultados?', a: 'Las radiografías simples están disponibles en línea el mismo día. Las tomografías y resonancias tienen un tiempo de entrega de 24 a 48 horas hábiles.' },
+  { q: '¿Necesito una orden médica para realizarme un examen radiológico?', a: 'No necesariamente. En Cedima IPS puedes realizarte algunos estudios de manera particular, sin orden médica. Sin embargo, para cuidar mejor tu salud y orientarte según tus síntomas, recomendamos primero consultar con un médico, quien podrá indicarte cuál es el examen más adecuado para tu caso.' },
+  { q: '¿Cuánto tiempo tardan los resultados?', a: 'En Cedima IPS sabemos que cada día cuenta cuando se trata de tu salud. Por eso, nuestros resultados de imágenes diagnósticas tienen un tiempo promedio de entrega de 24 horas hábiles, según el tipo de estudio realizado.' },
   { q: '¿Los exámenes de radiología tienen algún riesgo?', a: 'Las radiografías y tomografías usan dosis muy bajas de radiación, consideradas seguras. La ecografía y resonancia magnética no usan radiación. Nuestros equipos cumplen con todos los estándares de seguridad internacionales.' },
   { q: '¿Cómo me preparo para una ecografía abdominal?', a: 'Para una ecografía abdominal debes estar en ayuno de mínimo 4 horas y tener la vejiga llena. Para otros tipos de ecografías la preparación puede variar — te indicaremos los pasos al agendar tu cita.' },
   { q: '¿Puedo llevar mis imágenes a otro médico?', a: 'Sí. Todas nuestras imágenes se entregan en formato digital (CD o descarga en línea) y pueden ser compartidas con cualquier especialista.' },
@@ -52,10 +50,11 @@ export default function Radiologia() {
                 <span className="tag">Servicio</span>
               </div>
               <h1 className="pkg-hero__title">
-                <em>Radiología</em> e Imágenes Diagnósticas
+                <em>Imágenes</em> Diagnósticas
               </h1>
               <p className="pkg-hero__desc">
-                Diagnóstico preciso con tecnología de punta. Contamos con equipos de última generación para radiografías, ecografías, tomografías y resonancias magnéticas, con resultados disponibles en línea el mismo día.
+Cuando se trata de tu salud, tener respuestas a tiempo hace la diferencia.
+En Cedima IPS te ofrecemos estudios diagnósticos con procesos ágiles, personal capacitado y costos accesibles, para que puedas avanzar con tranquilidad y sin largas esperas.                
               </p>
               <div className="pkg-hero__actions">
                 <a href="#contacto" className="btn btn-primary">Agendar cita</a>
@@ -64,15 +63,16 @@ export default function Radiologia() {
             </div>
             <div className="pkg-price-card">
               <div className="pkg-price-card__header">
-                <span className="pkg-price-card__label">Descuento con plan Cedima</span>
+                <span className="pkg-price-card__label">PLAN ASISTENCIAL DE SALUD</span>
                 <span className="pkg-price-card__badge tag">Miembros</span>
               </div>
               <div className="pkg-price-card__amount">
-                <span className="pkg-price-card__number" style={{ fontSize: '2.5rem' }}>Hasta 50%</span>
+                <span className="pkg-price-card__number" style={{ fontSize: '2.5rem' }}>Ahorra hasta 50%</span>
               </div>
               <div className="pkg-price-card__divider" />
-              <p className="pkg-price-card__includes">Destacados</p>
-              {['Radiografías digitales de alta resolución', 'Ecografía y seguimiento obstétrico', 'Tomografía y resonancia magnética', 'Resultados digitales el mismo día', 'Radiólogos especializados certificados'].map(f => (
+              <p className="pkg-price-card__includes">Una membresía económica para cuidar tu salud durante todo el año con descuentos exclusivos en estudios y servicios seleccionados.
+Beneficios destacados</p>
+              {['Descuentos en imágenes diagnósticas', 'Atención ágil para miembros', 'Acceso a servicios seleccionados', 'Resultados el mismo día', 'Ahorro para ti y tu familia'].map(f => (
                 <div key={f} className="pkg-price-card__feature">
                   <div className="pkg-price-card__check">
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="var(--green-600)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -80,7 +80,7 @@ export default function Radiologia() {
                   {f}
                 </div>
               ))}
-              <a href="#contacto" className="btn btn-primary" style={{ justifyContent: 'center', marginTop: '1rem' }}>Agendar ahora</a>
+              <a href="#contacto" className="btn btn-primary" style={{ justifyContent: 'center', marginTop: '1rem' }}>Quiero mi Plan Cedima</a>
             </div>
           </div>
         </div>
@@ -105,13 +105,13 @@ export default function Radiologia() {
 
       <section className="pkg-section pkg-section--alt" id="servicios">
         <div className="container">
-          <p className="pkg-section__label">Tarifas</p>
-          <h2 className="pkg-section__title">Exámenes disponibles</h2>
-          <p className="pkg-section__sub">Todos los procedimientos con descuentos exclusivos para miembros de los planes Cedima.</p>
+          <p className="pkg-section__label">Plan Asistencial de Salud</p>
+          <h2 className="pkg-section__title">Cuida tu salud pagando menos</h2>
+          <p className="pkg-section__sub">Con tu membresía Cedima puedes acceder a estudios diagnósticos con descuentos exclusivos durante todo el año.</p>
           <div className="pkg-table-wrap">
             <table className="pkg-table">
               <thead>
-                <tr><th>Examen</th><th>Duración aprox.</th><th>Descuento miembros</th></tr>
+                <tr><th>Examen</th><th>Duración aprox.</th><th>Ahorro con Plan Cedima</th></tr>
               </thead>
               <tbody>
                 {SERVICES.map(s => (
@@ -139,8 +139,8 @@ export default function Radiologia() {
       <div className="container" id="contacto">
         <div className="pkg-cta">
           <div className="pkg-cta__text">
-            <h3 className="pkg-cta__title">¿Necesitas un examen radiológico?</h3>
-            <p className="pkg-cta__sub">Agenda tu cita hoy y recibe tus resultados digitales el mismo día.</p>
+            <h3 className="pkg-cta__title">¿Necesitas un estudio diagnóstico?</h3>
+            <p className="pkg-cta__sub">Agenda tu cita hoy y recibe tus resultados en 24 horas hábiles, sin largas esperas.</p>
           </div>
           <div className="pkg-cta__actions">
             <a href="tel:+57000000000" className="btn btn-white">Llamar ahora</a>

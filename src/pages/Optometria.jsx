@@ -4,31 +4,31 @@ import './PackagePage.css'
 import FAQ from './FAQ'
 
 const BENEFITS = [
-  { icon: '👁️', bg: '#dbeafe', title: 'Examen visual completo', desc: 'Evaluación integral de la agudeza visual, refracción y salud ocular para determinar tu prescripción exacta.' },
-  { icon: '🔭', bg: '#d0f4ea', title: 'Fondo de ojo', desc: 'Revisión de la retina, nervio óptico y vasos sanguíneos para detectar enfermedades oculares y sistémicas.' },
-  { icon: '📏', bg: '#fef9c3', title: 'Topografía corneal', desc: 'Mapeo detallado de la superficie de la córnea, esencial para diagnóstico de queratocono y adaptación de lentes.' },
-  { icon: '💧', bg: '#fde8ee', title: 'Evaluación de glaucoma', desc: 'Medición de la presión intraocular y análisis del nervio óptico para diagnóstico temprano del glaucoma.' },
-  { icon: '👓', bg: '#d4f0df', title: 'Adaptación de lentes', desc: 'Prescripción de gafas y lentes de contacto blandas, rígidas y de diseño especial según tu necesidad.' },
-  { icon: '👦', bg: '#ede9fe', title: 'Optometría pediátrica', desc: 'Evaluación visual temprana en niños para detectar y corregir problemas que puedan afectar su aprendizaje.' },
+  { icon: '🩺', bg: '#dbeafe', title: 'Endoscopia', desc: 'Estudio especializado para evaluar molestias digestivas, gastritis, reflujo y otros síntomas del sistema gastrointestinal.' },
+  { icon: '🔎', bg: '#d0f4ea', title: 'Colonoscopia', desc: 'Procedimiento diagnóstico para revisar el colon y apoyar la detección o seguimiento de condiciones digestivas.' },
+  { icon: '🫀', bg: '#fef9c3', title: 'Ecocardiograma y electrocardiograma', desc: 'Estudios para evaluar la salud del corazón y apoyar diagnósticos cardiovasculares de forma oportuna.' },
+  { icon: '📈', bg: '#fde8ee', title: 'Holter de presión y ritmo', desc: 'Monitoreo ambulatorio para revisar el comportamiento de la presión arterial o el ritmo cardíaco durante el día.' },
+  { icon: '🌸', bg: '#d4f0df', title: 'Colposcopia, citología y DIU', desc: 'Procedimientos ginecológicos para prevención, control y cuidado de la salud femenina.' },
+  { icon: '💧', bg: '#ede9fe', title: 'Uroflujometría y cistoscopia', desc: 'Estudios urológicos para evaluar síntomas urinarios y orientar un diagnóstico adecuado.' },
 ]
 
 const SERVICES = [
-  { servicio: 'Examen visual completo', tiempo: '45 min', descuento: 'Hasta 50%' },
-  { servicio: 'Fondo de ojo con dilatación', tiempo: '60 min', descuento: 'Hasta 45%' },
-  { servicio: 'Topografía corneal', tiempo: '20 min', descuento: 'Hasta 40%' },
-  { servicio: 'Tonometría (presión ocular)', tiempo: '15 min', descuento: 'Hasta 45%' },
-  { servicio: 'Adaptación lentes de contacto', tiempo: '45 min', descuento: 'Hasta 35%' },
-  { servicio: 'Examen visual pediátrico', tiempo: '45 min', descuento: 'Hasta 50%' },
-  { servicio: 'Campo visual computarizado', tiempo: '30 min', descuento: 'Hasta 40%' },
-  { servicio: 'Paquimetría corneal', tiempo: '15 min', descuento: 'Hasta 35%' },
+  { servicio: 'Endoscopia', tiempo: '20–30 min', descuento: 'Hasta 35%' },
+  { servicio: 'Colonoscopia', tiempo: '30–45 min', descuento: 'Hasta 35%' },
+  { servicio: 'Ecocardiograma y electrocardiograma', tiempo: '20–40 min', descuento: 'Hasta 40%' },
+  { servicio: 'Holter de presión y ritmo', tiempo: '15–20 min instalación / 24 h monitoreo', descuento: 'Hasta 40%' },
+  { servicio: 'Colposcopia, citología y DIU', tiempo: '20–30 min', descuento: 'Hasta 45%' },
+  { servicio: 'Uroflujometría y cistoscopia', tiempo: '30–45 min', descuento: 'Hasta 35%' },
+  { servicio: 'Nasofibrolaringoscopía', tiempo: '15–20 min', descuento: 'Hasta 40%' },
+  { servicio: 'Electromiografía', tiempo: '45–60 min', descuento: 'Hasta 35%' },
 ]
 
 const FAQS = [
-  { q: '¿Cada cuánto tiempo debo hacerme un examen visual?', a: 'Se recomienda un examen visual completo una vez al año. Si usas gafas o lentes de contacto, o tienes antecedentes de enfermedades oculares como glaucoma o diabetes, la frecuencia puede ser mayor según indicación del optómetra.' },
-  { q: '¿A qué edad deben hacerse los niños su primer examen visual?', a: 'El primer examen visual se recomienda entre los 6 meses y el año de vida, luego a los 3 años y antes de iniciar la etapa escolar. Detectar problemas a tiempo evita dificultades en el aprendizaje.' },
-  { q: '¿El examen con dilatación pupilar afecta mi visión temporalmente?', a: 'Sí. Las gotas para dilatar la pupila pueden causar visión borrosa de cerca y sensibilidad a la luz por 4 a 6 horas. Se recomienda venir acompañado y no conducir ese día.' },
-  { q: '¿Puedo adaptar lentes de contacto si tengo astigmatismo?', a: 'Sí. Existen lentes de contacto tóricas diseñadas específicamente para corregir el astigmatismo. El optómetra evaluará si eres candidato y qué tipo de lente se adapta mejor a tu caso.' },
-  { q: '¿El descuento Cedima aplica también en monturas y lentes ópticos?', a: 'El descuento aplica en los servicios de optometría clínica. Para monturas y lentes ópticos en nuestra óptica aliada, los miembros Elite y VIP tienen descuentos adicionales. Consulta con tu asesor Cedima.' },
+  { q: '¿Necesito una orden médica para realizarme un procedimiento?', a: 'No necesariamente. En Cedima IPS muchos procedimientos pueden realizarse bajo solicitud del paciente, sin necesidad de orden médica previa. Sin embargo, en algunos casos nuestros profesionales pueden orientarte para definir el procedimiento más adecuado según tus síntomas.' },
+  { q: '¿Cuánto tiempo debo esperar para agendar un procedimiento?', a: 'En Cedima IPS no tienes que esperar meses para acceder a un procedimiento médico. Generalmente, las citas se programan dentro de la misma semana, según disponibilidad.' },
+  { q: '¿Puedo realizarme procedimientos de forma particular??', a: 'Sí. Puedes acceder a nuestros procedimientos médicos de forma particular y sin trámites complicados. Además, con el Plan Cedima puedes obtener descuentos exclusivos en todos nuestros servicios.' },
+  { q: '¿El Plan Cedima incluye descuentos en procedimientos médicos?', a: 'Sí. Los miembros de los planes Cedima pueden acceder a descuentos de hasta el 50% en procedimientos, consultas y servicios médicos seleccionados.' },
+  { q: '¿Debo tener alguna preparación antes del procedimiento?', a: 'Algunos procedimientos pueden requerir preparación previa, como ayuno o recomendaciones específicas. Nuestro equipo te indicará todo lo necesario antes de tu cita.' },
 ]
 
 export default function Optometria() {
@@ -52,14 +52,14 @@ export default function Optometria() {
                 <span className="tag" style={{ background: '#dbeafe', color: '#1e40af' }}>Servicio</span>
               </div>
               <h1 className="pkg-hero__title">
-                <em>Optometría</em> y Salud Visual
+                <em>Procedimientos</em> Médicos
               </h1>
               <p className="pkg-hero__desc">
-                Tu visión es invaluable. Nuestros optómetras certificados realizan evaluaciones visuales completas con equipos de última tecnología para garantizar la salud de tus ojos y la calidad de tu visión a cualquier edad.
+                Accede a procedimientos médicos de forma ágil, segura y confiable, con atención profesional y sin largas esperas.
               </p>
               <div className="pkg-hero__actions">
-                <a href="#contacto" className="btn btn-primary">Agendar cita</a>
-                <a href="#servicios" className="btn btn-outline">Ver servicios</a>
+                <a href="#contacto" className="btn btn-primary">Agendar ahora</a>
+                <a href="#servicios" className="btn btn-outline">Ver procedimientos</a>
               </div>
             </div>
             <div className="pkg-price-card" style={{ borderColor: '#93c5fd' }}>
@@ -105,9 +105,9 @@ export default function Optometria() {
 
       <section className="pkg-section pkg-section--alt" id="servicios">
         <div className="container">
-          <p className="pkg-section__label">Tarifas</p>
-          <h2 className="pkg-section__title">Exámenes y procedimientos</h2>
-          <p className="pkg-section__sub">Todos los servicios de optometría con descuentos exclusivos para miembros de los planes Cedima.</p>
+          <p className="pkg-section__label">Procedimientos y beneficios</p>
+          <h2 className="pkg-section__title">Procedimientos médicos con atención oportuna</h2>
+          <p className="pkg-section__sub">Todos los procedimientos con descuentos exclusivos para miembros de los planes Cedima.</p>
           <div className="pkg-table-wrap">
             <table className="pkg-table">
               <thead>
@@ -131,7 +131,7 @@ export default function Optometria() {
         <div className="container">
           <p className="pkg-section__label">Preguntas frecuentes</p>
           <h2 className="pkg-section__title">Resolvemos tus dudas</h2>
-          <p className="pkg-section__sub">Todo lo que necesitas saber antes de tu consulta de optometría.</p>
+          <p className="pkg-section__sub"> Todo lo que necesitas saber antes de realizarte un procedimiento médico en Cedima IPS.</p>
           <FAQ items={FAQS} />
         </div>
       </section>

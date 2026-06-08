@@ -15,7 +15,9 @@ import PaqueteElite from './pages/PaqueteElite'
 import Radiologia from './pages/Radiologia'
 import Dermatologia from './pages/Dermatologia'
 import Optometria from './pages/Optometria'
-import Ginecologia from './pages/Ginecologia'
+import CirugiaProgamada from './pages/CirugiaProgramada.jsx'
+import Ginecologia from './pages/Ginecologia.jsx'
+
 
 function HomePage() {
   return (
@@ -44,7 +46,8 @@ export default function App() {
           <Route path="/servicios/radiologia" element={<Radiologia />} />
           <Route path="/servicios/dermatologia" element={<Dermatologia />} />
           <Route path="/servicios/optometria" element={<Optometria />} />
-          <Route path="/servicios/ginecologia" element={<Ginecologia />} />
+          <Route path="/servicios/cirugia-programada" element={<CirugiaProgamada/>} />
+          <Route path="/servicios/ginecologia" element={<Ginecologia/>} />
         </Routes>
       </main>
       <Footer />

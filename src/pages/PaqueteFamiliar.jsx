@@ -5,30 +5,30 @@ import FAQ from './FAQ'
 
 const BENEFITS = [
   { icon: '👨‍👩‍👧‍👦', bg: '#d0f4ea', title: 'Hasta 8 beneficiarios', desc: 'Un titular principal más hasta 8 miembros del núcleo familiar cubiertos bajo el mismo plan.' },
-  { icon: '🩺', bg: '#d4f0df', title: '2 consultas incluidas', desc: 'Consultas de medicina general incluidas en el plan para el titular y cada beneficiario.' },
-  { icon: '💊', bg: '#e0f7ef', title: '50% descuento en servicios', desc: 'Descuento de hasta el 50% en consultas de especialidades, exámenes de laboratorio e imágenes diagnósticas.' },
-  { icon: '🏥', bg: '#fde8ee', title: 'Red de clínicas Cedima', desc: 'Acceso a toda la red de sedes y clínicas aliadas con tarifas preferenciales exclusivas para miembros.' },
-  { icon: '📅', bg: '#ede9fe', title: 'Plan anual un solo pago', desc: 'Sin mensualidades ni cobros recurrentes. Paga una vez y disfruta el beneficio todo el año.' },
+  { icon: '🩺', bg: '#d4f0df', title: '1 consulta incluida', desc: 'Incluye una consulta con médico general sin costo.' },
+  { icon: '💊', bg: '#e0f7ef', title: '50% de descuento en servicios', desc: 'Descuento del 50% en la primera consulta de medicina interna y nutrición.' },
+  { icon: '🏥', bg: '#fde8ee', title: 'Descuentos', desc: 'Descuentos de hasta el 50% en todos nuestros servicios como consultas de especialidades, exámenes de laboratorio, imágenes diagnósticas, etc..' },
+  { icon: '📅', bg: '#ede9fe', title: 'Plan anual un solo pago', desc: 'Sin mensualidades ni cobros recurrentes. Paga una vez y disfruta el beneficio todo el año (también ofrecemos plan de financiamiento).' },
   { icon: '📞', bg: '#fef9c3', title: 'Atención prioritaria', desc: 'Línea de atención exclusiva para miembros del plan con agendamiento preferencial y tiempos de espera reducidos.' },
 ]
 
 const SERVICES = [
-  { servicio: 'Consulta medicina general', incluido: true, descuento: '2 consultas gratis' },
+  { servicio: 'Consulta medicina general', incluido: true, descuento: '1 consulta gratis' },
   { servicio: 'Consulta especialista', incluido: true, descuento: 'Hasta 50%' },
   { servicio: 'Laboratorio clínico', incluido: true, descuento: 'Hasta 40%' },
   { servicio: 'Imágenes diagnósticas', incluido: true, descuento: 'Hasta 50%' },
   { servicio: 'Odontología general', incluido: true, descuento: 'Hasta 30%' },
-  { servicio: 'Urgencias', incluido: true, descuento: 'Tarifa preferencial' },
+  { servicio: 'Urgencias', incluido: false, descuento: '_' },
   { servicio: 'Hospitalización', incluido: false, descuento: '—' },
-  { servicio: 'Cirugías electivas', incluido: false, descuento: '—' },
+  { servicio: 'Cirugías Programadas', incluido: true, descuento: 'Hasta un 40%' },
 ]
 
 const FAQS = [
-  { q: '¿Quiénes pueden ser beneficiarios?', a: 'Pueden ser beneficiarios el cónyuge o compañero(a) permanente, hijos menores de 25 años, padres y hermanos dependientes económicamente del titular. Se admiten hasta 8 personas en total.' },
-  { q: '¿Cuándo empieza a regir el plan?', a: 'El plan tiene vigencia inmediata desde el momento en que se confirma el pago. Recibirás tus carnés digitales en un plazo máximo de 24 horas hábiles.' },
-  { q: '¿Puedo agregar más beneficiarios después?', a: 'Sí, puedes agregar beneficiarios adicionales durante la vigencia del plan pagando un costo proporcional al tiempo restante del año.' },
-  { q: '¿El descuento aplica en todas las sedes?', a: 'El descuento aplica en todas las sedes Cedima y en la red de clínicas y laboratorios aliados en el país. Al momento de la consulta debes presentar tu carné o documento de identidad.' },
-  { q: '¿Qué pasa si no uso las 2 consultas incluidas?', a: 'Las consultas incluidas no son acumulables para el siguiente año. Te recomendamos utilizarlas para chequeos preventivos de salud.' },
+  { q: '¿Quiénes pueden ser beneficiarios?', a: 'Pueden ser beneficiarios el cónyuge o compañero(a) permanente, hijos, padres y hermanos. Se admiten hasta 8 personas en total del grupo familiar.' },
+  { q: '¿Cuándo empieza a regir el plan?', a: 'El plan tiene vigencia inmediata desde el momento en que se confirma el pago. Recibirás tus carnés digitales en un plazo máximo de 48 horas hábiles.' },
+  { q: '¿Puedo agregar más beneficiarios después?', a: 'Sí, hasta 3 días hábiles posterior al pago, o en caso de defunción de algun miembro del plan.' },
+  { q: '¿El descuento aplica en todas las sedes?', a: 'El descuento aplica en todas las sedes Cedima y en la red de clínicas y laboratorios aliados en la ciudad de Cali. Al momento de la consulta debes presentar tu carné y documento de identidad.' },
+  { q: '¿Qué pasa si no uso la consulta incluida o los descuentos de primera vez', a: 'Las consultas incluidas no son acumulables para el siguiente año. Te recomendamos utilizarlas para chequeos preventivos de salud.' },
 ]
 
 export default function PaqueteFamiliar() {
@@ -53,7 +53,7 @@ export default function PaqueteFamiliar() {
                 <span className="tag">Plan Familiar</span>
               </div>
               <h1 className="pkg-hero__title">
-                Paquete <em>Cedima Familiar</em>
+                Plan Asistencial de <em>Salud Familiar</em>
               </h1>
               <p className="pkg-hero__desc">
                 El plan diseñado para que toda tu familia acceda a servicios de salud de calidad con un único pago anual. Cubre al titular y hasta 8 beneficiarios con descuentos de hasta el 50%.
@@ -70,12 +70,12 @@ export default function PaqueteFamiliar() {
               </div>
               <div className="pkg-price-card__amount">
                 <span className="pkg-price-card__currency">$</span>
-                <span className="pkg-price-card__number">320.000</span>
+                <span className="pkg-price-card__number">245.000</span>
                 <span className="pkg-price-card__period">/ año</span>
               </div>
               <div className="pkg-price-card__divider" />
               <p className="pkg-price-card__includes">Incluye</p>
-              {['1 titular + hasta 8 beneficiarios', '2 consultas médicas incluidas', 'Hasta 50% de descuento', 'Vigencia de 12 meses', 'Carné digital inmediato'].map(f => (
+              {['1 titular + hasta 8 beneficiarios', '2 consultas médicas generales incluidas', '50% de descuento en la primera consulta de medicina interna y nutrición', 'Vigencia de 12 meses', 'Carné digital inmediato'].map(f => (
                 <div key={f} className="pkg-price-card__feature">
                   <div className="pkg-price-card__check">
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="var(--green-600)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/></svg>

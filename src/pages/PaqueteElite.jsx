@@ -4,40 +4,39 @@ import './PackagePage.css'
 import FAQ from './FAQ'
 
 const BENEFITS = [
-  { icon: '💰', bg: '#fef9c3', title: '$800.000 en servicios médicos', desc: 'Crédito médico de $800.000 para gastar en cualquier servicio de la red Cedima durante la vigencia del plan.' },
-  { icon: '📆', bg: '#d4f0df', title: 'Financiable hasta 24 cuotas', desc: 'El único plan Cedima que puedes pagar en cuotas mensuales, con plazos de 6, 12 o 24 meses.' },
-  { icon: '👨‍👩‍👧‍👦', bg: '#d0f4ea', title: 'Hasta 8 beneficiarios', desc: '1 titular más hasta 8 beneficiarios disfrutando de todos los beneficios Elite por 2 años completos.' },
-  { icon: '🩺', bg: '#ede9fe', title: 'Medicina general gratis todo el año', desc: 'Consultas ilimitadas de medicina general sin costo para el titular y todos los beneficiarios.' },
-  { icon: '⭐', bg: '#fde8ee', title: 'Tarifas preferenciales por 2 años', desc: 'Vigencia de 24 meses con acceso a las mejores tarifas y el mayor nivel de descuento en toda la red.' },
-  { icon: '🏆', bg: '#fef3c7', title: 'Beneficios exclusivos Elite', desc: 'Acceso prioritario, gestor de salud personal, descuentos en farmacia, óptica, odontología estética y más.' },
+  { icon: '💰', bg: '#fef9c3', title: '$800.000 en servicios médicos', desc: 'Disfruta un crédito médico de $800.000 para utilizar en servicios de la red Cedima durante la vigencia de tu plan.' },
+  { icon: '📆', bg: '#d4f0df', title: 'Paga tu plan en cuotas', desc: 'Accede al Plan Elite con facilidad de pago en 6, 12 o 24 cuotas, para cuidar tu salud sin afectar tu presupuesto.' },
+  { icon: '👨‍👩‍👧‍👦', bg: '#d0f4ea', title: 'Hasta 8 beneficiarios', desc: 'Incluye 1 titular y hasta 8 beneficiarios, para que tu familia también disfrute los beneficios del Plan Elite durante 2 años.' },
+  { icon: '🩺', bg: '#ede9fe', title: 'Medicina general gratis todo el año', desc: 'Consulta medicina general sin costo adicional durante la vigencia del plan, para el titular y sus beneficiarios.' },
+  { icon: '⭐', bg: '#fde8ee', title: 'Tarifas preferenciales por 2 años', desc: 'Accede durante 24 meses a descuentos exclusivos y tarifas especiales en servicios seleccionados de la red Cedima.' },
+  { icon: '🏆', bg: '#fef3c7', title: 'Beneficios exclusivos Elite', desc: 'Disfruta acceso preferencial, gestor de salud personal y descuentos en farmacia, odontología estética y más.' },
 ]
 
 const SERVICES = [
   { servicio: 'Consulta medicina general', incluido: true, descuento: 'Gratis todo el año' },
   { servicio: 'Consulta especialista', incluido: true, descuento: 'Hasta 50%' },
-  { servicio: 'Laboratorio clínico', incluido: true, descuento: 'Hasta 50%' },
+  { servicio: 'Laboratorio clínico', incluido: true, descuento: 'Hasta 40%' },
   { servicio: 'Imágenes diagnósticas', incluido: true, descuento: 'Hasta 50%' },
-  { servicio: 'Odontología general y estética', incluido: true, descuento: 'Hasta 40%' },
-  { servicio: 'Óptica', incluido: true, descuento: 'Hasta 30%' },
+  { servicio: 'Odontología general y estética', incluido: true, descuento: 'Hasta 30%' },
   { servicio: 'Farmacia aliada', incluido: true, descuento: 'Hasta 25%' },
-  { servicio: 'Medicina alternativa', incluido: true, descuento: 'Hasta 30%' },
+  { servicio: 'Urgencias', incluido: false, descuento: '-' },
   { servicio: 'Crédito en servicios médicos', incluido: true, descuento: '$800.000 COP' },
   { servicio: 'Hospitalización', incluido: false, descuento: '—' },
 ]
 
 const CUOTAS = [
-  { plazo: '6 cuotas', cuota: '$~155.000', total: '$930.000' },
-  { plazo: '12 cuotas', cuota: '$~82.000', total: '$984.000' },
-  { plazo: '24 cuotas', cuota: '$~44.000', total: '$1.056.000' },
+  { plazo: '6 cuotas', cuota: '$~300.000' },
+  { plazo: '12 cuotas', cuota: '$~150.000' },
+  { plazo: '24 cuotas', cuota: '$~78.000' },
 ]
 
 const FAQS = [
-  { q: '¿Cómo funciona el crédito de $800.000 en servicios?', a: 'El crédito se carga a tu cuenta al activar el plan. Puedes utilizarlo en cualquier servicio de la red Cedima durante los 24 meses de vigencia. El saldo disponible se actualiza con cada uso.' },
-  { q: '¿Cuáles son las opciones de financiación?', a: 'Puedes pagar en 6, 12 o 24 cuotas mensuales. El plan se activa desde el primer pago y el crédito médico queda disponible en su totalidad desde el inicio.' },
-  { q: '¿Qué pasa si termino de pagar las cuotas antes de 2 años?', a: 'El plan tiene vigencia de 24 meses independientemente del plazo de financiación. Una vez pagues todas las cuotas, el plan continúa activo hasta cumplir los 2 años.' },
-  { q: '¿Los beneficiarios también acceden al crédito médico?', a: 'Sí. El crédito de $800.000 puede ser utilizado por el titular y cualquiera de los beneficiarios registrados. El saldo es compartido entre todos.' },
-  { q: '¿Puedo renovar el plan Elite al vencer?', a: 'Sí. Al vencer los 24 meses puedes renovar con condiciones preferenciales de fidelización. El equipo Cedima te contactará con anticipación para gestionar la renovación.' },
-  { q: '¿Hay algún examen médico previo para ingresar al plan?', a: 'No. El plan Elite no requiere exámenes previos ni declaración de salud. La afiliación es inmediata al formalizar el acuerdo de pago.' },
+  { q: '¿Cómo funciona el beneficio de $800.000 en servicios médicos?', a: 'Al activar tu Plan Elite, cuentas con un saldo disponible de hasta $800.000 en servicios médicos para cuidar tu salud y la de tus beneficiarios durante 24 meses. Puedes usarlo en servicios de la red Cedima, y el saldo se irá actualizando cada vez que hagas uso de tus beneficios.' },
+  { q: '¿Cuáles son las opciones de financiación?', a: 'El Plan Elite puede financiarse en 6, 12 o 24 cuotas mediante Sistecrédito o MiPlante con factura EMCALI. Los beneficios se activan desde el primer pago.' },
+  { q: '¿Qué pasa si termino de pagar las cuotas antes de los 2 años?', a: 'El Plan Elite mantiene su vigencia de 24 meses, sin importar el plazo de financiación que elijas. Si terminas de pagarlo antes, seguirás disfrutando tus beneficios hasta completar los 2 años.' },
+  { q: '¿Los beneficiarios también pueden usar el beneficio de $800.000?', a: 'Sí. El beneficio de $800.000 en servicios médicos puede ser utilizado por el titular y los beneficiarios registrados. El saldo es compartido entre todos durante la vigencia del plan.' },
+  { q: '¿Puedo renovar el plan Elite al vencer?', a: 'Sí. Al finalizar los 24 meses, podrás renovar tu Plan Elite y seguir disfrutando tus beneficios. Nuestro equipo te contactará con anticipación para acompañarte en el proceso de renovación.' },
+  { q: '¿Hay algún examen médico previo para ingresar al plan?', a: 'No. Para ingresar al Plan Elite no necesitas exámenes médicos previos ni declaración de salud. Tu plan queda activo una vez completes el proceso y formalices el pago.' },
 ]
 
 export default function PaqueteElite() {
@@ -61,7 +60,7 @@ export default function PaqueteElite() {
                 <span className="tag" style={{ background: '#fef3c7', color: '#92400e' }}>Plan Elite — 2 años</span>
               </div>
               <h1 className="pkg-hero__title">
-                Paquete de <em>Salud Elite</em>
+                Plan Asistencial de <em>Salud Elite</em>
               </h1>
               <p className="pkg-hero__desc">
                 El plan más completo de Cedima. Fináncialo hasta en 24 cuotas, accede a $800.000 en servicios médicos, consultas gratis todo el año y beneficios exclusivos por 2 años para toda tu familia.
@@ -78,13 +77,13 @@ export default function PaqueteElite() {
               </div>
               <div className="pkg-price-card__amount">
                 <span className="pkg-price-card__currency" style={{ color: '#b45309' }}>$</span>
-                <span className="pkg-price-card__number" style={{ color: '#92400e' }}>800.000</span>
+                <span className="pkg-price-card__number" style={{ color: '#92400e' }}>1.500.000</span>
                 <span className="pkg-price-card__period">/ 2 años</span>
               </div>
-              <p style={{ fontSize: 13, color: 'var(--text-soft)', marginTop: -8 }}>O financiable desde $44.000/mes</p>
+              <p style={{ fontSize: 13, color: 'var(--text-soft)', marginTop: -8 }}>O financiable desde $78.000/mes</p>
               <div className="pkg-price-card__divider" />
               <p className="pkg-price-card__includes">Incluye</p>
-              {['1 titular + hasta 8 beneficiarios', '$800.000 en servicios médicos', 'Medicina general gratis todo el año', 'Hasta 50% en especialidades', 'Vigencia de 24 meses', 'Financiable en 6, 12 o 24 cuotas'].map(f => (
+              {['1 titular + hasta 8 beneficiarios', '$800.000 en servicios médicos', 'Medicina general gratis todo el año', 'Hasta 50% de descuento en especialidades', 'Vigencia de 24 meses', 'Financiable en 6, 12 o 24 cuotas'].map(f => (
                 <div key={f} className="pkg-price-card__feature">
                   <div className="pkg-price-card__check" style={{ background: '#fef3c7' }}>
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#b45309" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -92,7 +91,7 @@ export default function PaqueteElite() {
                   {f}
                 </div>
               ))}
-              <a href="#contacto" className="btn btn-primary" style={{ justifyContent: 'center', marginTop: '4px' }}>Adquirir ahora</a>
+              <a href="#contacto" className="btn btn-primary" style={{ justifyContent: 'center', marginTop: '4px' }}>Quiero mi Plan Elite</a>
             </div>
           </div>
         </div>
@@ -101,8 +100,8 @@ export default function PaqueteElite() {
       <section className="pkg-section">
         <div className="container">
           <p className="pkg-section__label">Beneficios Elite</p>
-          <h2 className="pkg-section__title">Todo lo que obtienes por 2 años</h2>
-          <p className="pkg-section__sub">El plan más completo de Cedima pensado para familias que quieren la mejor cobertura con flexibilidad de pago.</p>
+          <h2 className="pkg-section__title">Cuidado completo para tu familia por 2 años</h2>
+          <p className="pkg-section__sub">Accede al plan más completo de Cedima con beneficios exclusivos, tarifas preferenciales y una cobertura pensada para acompañar a tu familia por más tiempo.</p>
           <div className="pkg-benefits">
             {BENEFITS.map(b => (
               <div key={b.title} className="pkg-benefit-card">
@@ -118,9 +117,9 @@ export default function PaqueteElite() {
       {/* Financiación table */}
       <section className="pkg-section pkg-section--alt" id="financiacion">
         <div className="container">
-          <p className="pkg-section__label">Opciones de pago</p>
-          <h2 className="pkg-section__title">Elige tu plazo de financiación</h2>
-          <p className="pkg-section__sub">El plan Elite es el único plan Cedima que puedes pagar en cuotas. Tu cobertura inicia desde el primer pago.</p>
+          <p className="pkg-section__label">PAGO FLEXIBLE</p>
+          <h2 className="pkg-section__title">Activa tu Plan Elite y págalo a tu ritmo</h2>
+          <p className="pkg-section__sub">Accede al plan más completo de Cedima por 2 años, con opciones de financiación a través de Sistecrédito o MiPlante, usando tu factura de servicios públicos de EMCALI. Tus beneficios comienzan desde el primer pago.</p>
           <div className="pkg-table-wrap" style={{ marginBottom: 48 }}>
             <table className="pkg-table">
               <thead>
@@ -137,7 +136,7 @@ export default function PaqueteElite() {
                 <tr>
                   <td style={{ fontWeight: 500 }}>Pago único</td>
                   <td>—</td>
-                  <td style={{ fontWeight: 500, color: 'var(--green-600)' }}>$800.000</td>
+                  <td style={{ fontWeight: 500, color: 'var(--green-600)' }}>$1.500.000</td>
                 </tr>
               </tbody>
             </table>
@@ -177,8 +176,8 @@ export default function PaqueteElite() {
       <div className="container" id="contacto">
         <div className="pkg-cta">
           <div className="pkg-cta__text">
-            <h3 className="pkg-cta__title">Invierte en la salud de tu familia 🏆</h3>
-            <p className="pkg-cta__sub">2 años de cobertura completa, financiable desde $44.000 al mes.</p>
+            <h3 className="pkg-cta__title">Cuida la salud de tu familia por 2 años🏆</h3>
+            <p className="pkg-cta__sub">Accede al Plan Elite con cobertura completa y financiación desde $78.000 al mes.</p>
           </div>
           <div className="pkg-cta__actions">
             <a href="tel:+57000000000" className="btn btn-white">Llamar ahora</a>

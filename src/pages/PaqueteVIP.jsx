@@ -6,25 +6,25 @@ import FAQ from './FAQ'
 const BENEFITS = [
   { icon: '👨‍👩‍👧‍👦', bg: '#ede9fe', title: 'Hasta 8 beneficiarios', desc: '1 titular más hasta 8 beneficiarios cubiertos con todos los beneficios VIP del plan.' },
   { icon: '🩺', bg: '#d0f4ea', title: 'Medicina general gratis todo el año', desc: 'Consultas ilimitadas de medicina general sin costo adicional para el titular y beneficiarios.' },
-  { icon: '💊', bg: '#e0f7ef', title: 'Hasta 50% en especialidades', desc: 'Bonos de descuento del 50% en consultas de especialidades médicas en toda la red Cedima.' },
-  { icon: '⭐', bg: '#fef9c3', title: 'Tarifas VIP exclusivas', desc: 'Acceso a las tarifas más bajas de la red para procedimientos, laboratorios e imágenes diagnósticas.' },
+  { icon: '💊', bg: '#e0f7ef', title: 'Hasta 50% en especialidades', desc: 'Descuento del 50% en la primera consulta en Medicina Interna, Urología, Ginecología, Dermatología y Nutrición.' },
+  { icon: '⭐', bg: '#fef9c3', title: 'Tarifas VIP exclusivas', desc: 'Acceso a las tarifas más bajas de la red para procedimientos, consulta especializda, cirugías programadas e imágenes diagnósticas.' },
   { icon: '🏥', bg: '#fde8ee', title: 'Red ampliada de clínicas', desc: 'Cobertura en todas las sedes Cedima y en una red ampliada de clínicas, laboratorios y especialistas aliados.' },
-  { icon: '🎁', bg: '#d4f0df', title: 'Beneficios exclusivos VIP', desc: 'Acceso prioritario a jornadas de salud, descuentos en farmacia, óptica y medicina alternativa.' },
+  { icon: '🎁', bg: '#d4f0df', title: 'Atención prioritaria', desc: 'Línea de atención exclusiva para miembros del plan con agendamiento preferencial y tiempos de espera reducidos.' },
 ]
 
 const SERVICES = [
   { servicio: 'Consulta medicina general', incluido: true, descuento: 'Gratis todo el año' },
-  { servicio: 'Consulta especialista', incluido: true, descuento: 'Hasta 50%' },
-  { servicio: 'Laboratorio clínico', incluido: true, descuento: 'Hasta 45%' },
-  { servicio: 'Imágenes diagnósticas', incluido: true, descuento: 'Hasta 50%' },
-  { servicio: 'Odontología', incluido: true, descuento: 'Hasta 35%' },
-  { servicio: 'Óptica', incluido: true, descuento: 'Hasta 25%' },
-  { servicio: 'Farmacia aliada', incluido: true, descuento: 'Hasta 20%' },
+  { servicio: 'Consulta especialista', incluido: true, descuento: 'Hasta 60%' },
+  { servicio: 'Laboratorio clínico', incluido: true, descuento: 'Hasta 40%' },
+  { servicio: 'Imágenes diagnósticas', incluido: true, descuento: 'Hasta 60%' },
+  { servicio: 'Odontología', incluido: true, descuento: 'Hasta 30%' },
+  { servicio: 'Urgencias', incluido: false, descuento: '_' },
+  { servicio: 'Cirugías Programadas', incluido: true, descuento: 'Hasta 50%' },
   { servicio: 'Hospitalización', incluido: false, descuento: '—' },
 ]
 
 const FAQS = [
-  { q: '¿Cuál es la diferencia entre el VIP y el plan Familiar estándar?', a: 'El plan VIP incluye consultas de medicina general gratis todo el año (sin límite), tarifas VIP exclusivas más bajas que el plan familiar, y beneficios adicionales en farmacia y óptica.' },
+  { q: '¿Cuál es la diferencia entre el VIP y el plan Familiar estándar?', a: 'El plan VIP incluye consultas de medicina general gratis todo el año (sin límite), tarifas VIP exclusivas más bajas que el plan familiar y bonos de descuento deñ 50% en más especialidades.' },
   { q: '¿Las consultas ilimitadas aplican para todos los beneficiarios?', a: 'Sí, las consultas de medicina general sin costo aplican para el titular y todos los beneficiarios registrados en el plan.' },
   { q: '¿Cómo se activan los bonos de descuento en especialidades?', a: 'Los bonos se activan automáticamente al momento de registrar tu cita. Solo necesitas indicar que eres miembro VIP Cedima y presentar tu documento de identidad.' },
   { q: '¿Puedo usar el plan en otra ciudad?', a: 'Sí. El plan VIP tiene cobertura en todas las sedes Cedima del país y en la red ampliada de aliados. Consulta la sede más cercana en nuestra web o línea de atención.' },
@@ -52,7 +52,7 @@ export default function PaqueteVIP() {
                 <span className="tag" style={{ background: '#ede9fe', color: '#5b21b6' }}>Plan VIP</span>
               </div>
               <h1 className="pkg-hero__title">
-                Paquete Médico <em>Familiar VIP</em>
+                Plan Asistencial de <em>Salud Integral</em>
               </h1>
               <p className="pkg-hero__desc">
                 La experiencia premium de salud familiar. Consultas de medicina general gratuitas todo el año, tarifas VIP exclusivas y cobertura completa para hasta 8 beneficiarios.
@@ -65,16 +65,16 @@ export default function PaqueteVIP() {
             <div className="pkg-price-card" style={{ borderColor: '#c4b5fd' }}>
               <div className="pkg-price-card__header">
                 <span className="pkg-price-card__label">Valor del plan</span>
-                <span className="pkg-price-card__badge" style={{ background: '#ede9fe', color: '#5b21b6', padding: '3px 12px', borderRadius: '100px', fontSize: '11px', fontWeight: 500 }}>VIP ✨</span>
+                <span className="pkg-price-card__badge" style={{ background: '#ede9fe', color: '#5b21b6', padding: '3px 12px', borderRadius: '100px', fontSize: '11px', fontWeight: 500 }}>El más completo ✨</span>
               </div>
               <div className="pkg-price-card__amount">
                 <span className="pkg-price-card__currency">$</span>
-                <span className="pkg-price-card__number">480.000</span>
+                <span className="pkg-price-card__number">325.000</span>
                 <span className="pkg-price-card__period">/ año</span>
               </div>
               <div className="pkg-price-card__divider" />
               <p className="pkg-price-card__includes">Incluye</p>
-              {['1 titular + hasta 8 beneficiarios', 'Medicina general gratis todo el año', 'Bonos 50% en especialidades', 'Tarifas VIP exclusivas', 'Farmacia y óptica con descuento'].map(f => (
+              {['1 titular + hasta 8 beneficiarios', 'Medicina general gratis todo el año', 'Bonos de 50% de descuento en especialidades', 'Tarifas VIP exclusivas', 'Farmacia con descuento'].map(f => (
                 <div key={f} className="pkg-price-card__feature">
                   <div className="pkg-price-card__check" style={{ background: '#ede9fe' }}>
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#7c3aed" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -92,7 +92,7 @@ export default function PaqueteVIP() {
         <div className="container">
           <p className="pkg-section__label">Beneficios VIP</p>
           <h2 className="pkg-section__title">La experiencia de salud más completa</h2>
-          <p className="pkg-section__sub">Todo lo del plan familiar estándar, más consultas ilimitadas y beneficios exclusivos para toda la familia.</p>
+          <p className="pkg-section__sub">Todo lo del plan familiar estándar, más consultas de medicina general ilimitadas y beneficios exclusivos para toda la familia.</p>
           <div className="pkg-benefits">
             {BENEFITS.map(b => (
               <div key={b.title} className="pkg-benefit-card">

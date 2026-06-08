@@ -5,30 +5,30 @@ import FAQ from './FAQ'
 
 const BENEFITS = [
   { icon: '👤', bg: '#d4f0df', title: 'Plan individual', desc: 'Diseñado para una sola persona que quiere acceso a salud de calidad con un único pago anual.' },
-  { icon: '🩺', bg: '#d0f4ea', title: '2 consultas incluidas', desc: 'Dos consultas de medicina general incluidas sin ningún costo adicional durante el año.' },
-  { icon: '💊', bg: '#e0f7ef', title: 'Hasta 50% de descuento', desc: 'Descuento en consultas de especialidades, laboratorio e imágenes diagnósticas en toda la red Cedima.' },
+  { icon: '🩺', bg: '#d0f4ea', title: '1 consulta incluida', desc: '1 consulta de medicina general incluida sin costo.' },
+  { icon: '💊', bg: '#e0f7ef', title: '50% de descuento en servicios', desc: 'Descuento del 50% en la primera consulta de medicina interna y nutrición.' },
   { icon: '📋', bg: '#fde8ee', title: 'Tarifas preferenciales', desc: 'Accede a tarifas especiales para miembros en procedimientos y servicios de la red aliada Cedima.' },
   { icon: '🚀', bg: '#ede9fe', title: 'Activación inmediata', desc: 'Tu plan queda activo desde el momento del pago. Carnés digitales en menos de 24 horas hábiles.' },
-  { icon: '🔒', bg: '#fef9c3', title: 'Beneficios exclusivos', desc: 'Acceso a campañas de salud preventiva, jornadas de vacunación y descuentos especiales en óptica.' },
+  { icon: '🔒', bg: '#fef9c3', title: 'Atención prioritaria', desc: 'Línea de atención exclusiva para miembros del plan con agendamiento preferencial y tiempos de espera reducidos.' },
 ]
 
 const SERVICES = [
-  { servicio: 'Consulta medicina general', incluido: true, descuento: '2 consultas gratis' },
+  { servicio: 'Consulta medicina general', incluido: true, descuento: '1 consulta gratis' },
   { servicio: 'Consulta especialista', incluido: true, descuento: 'Hasta 50%' },
   { servicio: 'Laboratorio clínico', incluido: true, descuento: 'Hasta 40%' },
-  { servicio: 'Imágenes diagnósticas', incluido: true, descuento: 'Hasta 45%' },
+  { servicio: 'Imágenes diagnósticas', incluido: true, descuento: 'Hasta 50%' },
   { servicio: 'Odontología general', incluido: true, descuento: 'Hasta 30%' },
-  { servicio: 'Óptica', incluido: true, descuento: 'Hasta 20%' },
+  { servicio: 'Urgencias', incluido: false, descuento: '_' },
   { servicio: 'Beneficiarios adicionales', incluido: false, descuento: '—' },
   { servicio: 'Hospitalización', incluido: false, descuento: '—' },
 ]
 
 const FAQS = [
-  { q: '¿Este plan es solo para el titular?', a: 'Sí, el Paquete Médico es un plan individual pensado para una sola persona. Si necesitas cubrir a tu familia, te recomendamos el Paquete Familiar o el Paquete VIP.' },
-  { q: '¿Puedo pasar a un plan familiar en el futuro?', a: 'Sí. Al renovar tu plan puedes hacer un upgrade al Paquete Familiar o VIP. El equipo de Cedima te ayudará a gestionar la transición sin inconvenientes.' },
-  { q: '¿Las consultas incluidas tienen alguna restricción?', a: 'Las 2 consultas de medicina general incluidas no tienen restricción de especialidad dentro de la medicina general. Puedes usarlas cuando lo necesites durante la vigencia del plan.' },
-  { q: '¿El descuento aplica en todos los especialistas?', a: 'El descuento aplica en todas las especialidades disponibles en la red Cedima. La disponibilidad puede variar según la ciudad o sede.' },
-  { q: '¿Cómo presento el beneficio al momento de la consulta?', a: 'Simplemente identifícate con tu documento de identidad en cualquier sede Cedima. También puedes mostrar tu carné digital desde el correo de confirmación que recibes al adquirir el plan.' },
+  { q: '¿Este plan es solo para el titular?', a: 'Sí, el Paquete Médico es un plan individual pensado para una sola persona. Si necesitas cubrir a tu familia, te recomendamos el Plan Familiar, Integral o Elite.' },
+  { q: '¿Puedo pasar a un plan familiar en el futuro?', a: 'Sí. Al renovar tu plan puedes hacer un upgrade a el Plan Familiar, Integral o Elite. El equipo de Cedima te ayudará a gestionar la transición sin inconvenientes.' },
+  { q: '¿La consulta incluida tienen alguna restricción?', a: 'La consulta de medicina general incluida es únicamente para el titular del plan. Puedes usarla cuando lo necesites durante la vigencia del plan.' },
+  { q: '¿El descuento aplica en todos los especialistas?', a: 'El descuento aplica en todas las especialidades disponibles en la red Cedima. La disponibilidad puede variar según la sede.' },
+  { q: '¿Cómo presento el beneficio al momento de la consulta?', a: 'Simplemente identifícate con tu documento de identidad en cualquier sede Cedima. También puedes mostrar tu carné digital.' },
 ]
 
 export default function PaqueteMedico() {
@@ -52,14 +52,15 @@ export default function PaqueteMedico() {
                 <span className="tag">Plan Individual</span>
               </div>
               <h1 className="pkg-hero__title">
-                Paquete <em>Cedima Médico</em>
+                Plan asistencial de <em>Salud Individual</em>
               </h1>
               <p className="pkg-hero__desc">
-                El plan individual ideal para quienes quieren acceso ágil a servicios de salud de calidad. Un único pago anual con consultas incluidas y descuentos en toda la red Cedima.
+                Pensado para quienes quieren cuidar su salud sin esperar a que aparezca una urgencia. Con este plan anual, tienes acceso a consultas, descuentos y servicios que te ayudan a estar más tranquilo durante todo el año.
+              
               </p>
               <div className="pkg-hero__actions">
-                <a href="#contacto" className="btn btn-primary">Adquirir plan</a>
-                <a href="#servicios" className="btn btn-outline">Ver servicios</a>
+                <a href="#contacto" className="btn btn-primary">Quiero mi plan individual</a>
+                <a href="#servicios" className="btn btn-outline">Ver beneficios incluidos</a>
               </div>
             </div>
             <div className="pkg-price-card">
@@ -69,12 +70,12 @@ export default function PaqueteMedico() {
               </div>
               <div className="pkg-price-card__amount">
                 <span className="pkg-price-card__currency">$</span>
-                <span className="pkg-price-card__number">150.000</span>
+                <span className="pkg-price-card__number">120.000</span>
                 <span className="pkg-price-card__period">/ año</span>
               </div>
               <div className="pkg-price-card__divider" />
               <p className="pkg-price-card__includes">Incluye</p>
-              {['Solo para el titular', '2 consultas de medicina general', 'Hasta 50% de descuento', 'Tarifas preferenciales', 'Vigencia de 12 meses'].map(f => (
+              {['Solo para el titular', '1 consulta de medicina general sin costo', '50% de descuento en la primera consulta de medicina interna y nutrición', 'Tarifas preferenciales', 'Vigencia de 12 meses'].map(f => (
                 <div key={f} className="pkg-price-card__feature">
                   <div className="pkg-price-card__check">
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="var(--green-600)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -82,7 +83,7 @@ export default function PaqueteMedico() {
                   {f}
                 </div>
               ))}
-              <a href="#contacto" className="btn btn-primary" style={{ justifyContent: 'center', marginTop: '4px' }}>Adquirir ahora</a>
+              <a href="#contacto" className="btn btn-primary" style={{ justifyContent: 'center', marginTop: '4px' }}>Activar mi plan hoy</a>
             </div>
           </div>
         </div>

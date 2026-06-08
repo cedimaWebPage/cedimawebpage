@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from 'react'
 import './Stats.css'
 
 const STATS = [
-  { value: 27, suffix: '%', label: 'Lower NICU admissions', desc: 'Reducing costly interventions through proactive care' },
-  { value: 57, suffix: '%', label: 'Return to work support', desc: 'Members who report Maven helped them return after baby' },
-  { value: 30, suffix: '%', label: 'Natural pregnancy rate', desc: 'Fertility members achieving pregnancy without ART' },
-  { value: 21, suffix: '%', label: 'Maternal mental health', desc: 'Members reporting improved mental wellbeing' },
+  { value: 20, suffix: '+', label: 'Especialidades médicas', desc: 'Atención en medicina general, ginecología, dermatología, urología y más en Cali.' },
+  { value: 3, suffix: 'Días', label: 'Citas más rápidas', desc: 'Agenda consultas con especialistas en tiempos mucho más ágiles.' },
+  { value: 50, suffix: '%', label: 'Descuentos exclusivos', desc: 'Beneficios especiales en consultas, procedimientos y servicios médicos seleccionados.' },
+  { value: 8, suffix: '+', label: 'Cobertura familiar', desc: 'Planes diseñados para cuidar la salud de toda tu familia en un solo lugar.' },
 ]
 
 function useCountUp(target, active) {
@@ -56,11 +56,11 @@ export default function Stats() {
         <div className="stats__header">
           <span className="tag" style={{ background: 'rgba(255,255,255,0.12)', color: 'var(--green-100)' }}>Proven outcomes</span>
           <h2 className="stats__title">
-            Lowering costs by{' '}
-            <span className="italic" style={{ color: 'var(--green-200)' }}>improving care</span>
+            Más acceso a salud,{' '}
+            <span className="italic" style={{ color: 'var(--green-200)' }}>menos barreras</span>
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.65)', maxWidth: 500, fontSize: '1.05rem', lineHeight: 1.7 }}>
-            By guiding members through more intuitive paths to health, we help reduce costly interventions and improve outcomes.
+            En Cedima IPS trabajamos para que puedas acceder a consultas, especialistas y procedimientos médicos en menos tiempo, con atención profesional y beneficios reales para tu familia.
           </p>
         </div>
         <div className="stats__grid">
@@ -69,7 +69,7 @@ export default function Stats() {
           ))}
         </div>
         <div className="stats__footnote">
-          Outcomes validated by Milliman and 40+ peer-reviewed studies
+          
         </div>
       </div>
     </section>
