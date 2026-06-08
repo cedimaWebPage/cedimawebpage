@@ -24,7 +24,6 @@ function HomePage() {
     <>
       <Hero />
       <Programs />
-      <Features />
       <Stats />
       <Testimonials />
       <CTA />
