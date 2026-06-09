@@ -54,7 +54,7 @@ export default function Stats() {
     <section className="stats section section--dark" ref={ref}>
       <div className="container">
         <div className="stats__header">
-          <span className="tag" style={{ background: 'rgba(255,255,255,0.12)', color: 'var(--green-100)' }}>Proven outcomes</span>
+          <span className="tag" style={{ background: 'rgba(255,255,255,0.12)', color: 'var(--green-100)' }}>Resultados Demostrados</span>
           <h2 className="stats__title">
             Más acceso a salud,{' '}
             <span className="italic" style={{ color: 'var(--green-200)' }}>menos barreras</span>

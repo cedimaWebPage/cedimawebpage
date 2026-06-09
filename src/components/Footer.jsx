@@ -3,56 +3,41 @@ import './Footer.css'
 
 const FOOTER_LINKS = [
   {
-    heading: 'Join CarePath',
+    heading: 'Únete a Cedima',
     links: [
       { label: 'Employers', href: '#employers' },
       { label: 'Health Plans', href: '#health-plans' },
       { label: 'Consultants', href: '#consultants' },
       { label: 'Individuals', href: '#individuals' },
-      { label: 'Become a Provider', href: '#providers' },
     ],
   },
   {
-    heading: 'Programs',
+    heading: 'Programas',
     links: [
-      { label: 'Fertility & Family Building', href: '#fertility' },
-      { label: 'Maternity & Newborn Care', href: '#maternity' },
-      { label: 'Parenting & Pediatrics', href: '#parenting' },
-      { label: 'Menopause & Midlife Health', href: '#menopause' },
-      { label: 'CarePath Wallet', href: '#wallet' },
+      { label: 'Plan Asistencial Familiar', href: 'paquete-familiar' },
+      { label: 'Plan Asistencial Individual', href: 'paquete-medico' },
+      { label: 'Plan Asistencial de Salud Integral', href: 'paquete-vip' },
+      { label: 'Plan Asistencial de Salud Elite', href: 'paquete-elite' },
     ],
   },
   {
-    heading: 'Company',
+    heading: 'Compañía',
     links: [
-      { label: 'About Us', href: '#about' },
-      { label: 'Careers', href: '#careers', badge: 'Hiring' },
-      { label: 'Press', href: '#press' },
-      { label: 'Solutions', href: '#solutions' },
-      { label: 'Pricing', href: '#pricing' },
-      { label: 'Book a Demo', href: '#demo' },
+      { label: 'Nosotros', href: '#about' },
+      { label: 'Trabaja con nosotros', href: '#careers', badge: 'Disponible' },
+      { label: 'Precios', href: '#pricing' },
     ],
   },
-  {
-    heading: 'Resources',
-    links: [
-      { label: 'Resource Center', href: '#resources' },
-      { label: 'Clinical Research', href: '#research' },
-      { label: 'Webinars', href: '#webinars' },
-      { label: 'Blog', href: '#blog' },
-      { label: 'Case Studies', href: '#cases' },
-    ],
-  },
+  
 ]
 
 export default function Footer() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    if (email) { setSubmitted(true); setEmail('') }
-  }
+  const buttonClick = () => {
+    window.open("https://web.whatsapp.com/send/?phone=573152591449&text&type=phone_number&app_absent=0", "_blank", "noopener,noreferrer");
+  };
 
   return (
     <footer className="footer">
@@ -62,47 +47,32 @@ export default function Footer() {
           {/* Brand */}
           <div className="footer__brand">
             <a href="#" className="footer__logo">
-              <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-                <circle cx="16" cy="16" r="16" fill="#1d7a4a"/>
-                <path d="M10 22 L16 10 L22 22 M12.5 18 H19.5" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              <span className="footer__brand-name">CarePath</span>
+              <img src= "images\cedimaLogo.jpg" className="footer__logo-img" />
+              <span className="footer__brand-name">Cedima IPS</span>
             </a>
             <p className="footer__tagline">
-              Evidence-based women's &amp; family healthcare. Trusted by 2,000+ employers worldwide.
+              Dándote el mejor servicio al mejor precio.
             </p>
 
             {/* Newsletter */}
             <div className="footer__newsletter">
-              <p className="footer__newsletter-label">Stay in the loop</p>
-              {submitted ? (
-                <p className="footer__newsletter-thanks">Thanks for subscribing! ✓</p>
-              ) : (
-                <form className="footer__newsletter-form" onSubmit={handleSubmit}>
-                  <input
-                    type="email"
-                    placeholder="Your email"
-                    value={email}
-                    onChange={e => setEmail(e.target.value)}
-                    className="footer__input"
-                    required
-                  />
-                  <button type="submit" className="btn btn-primary" style={{ padding: '10px 20px', fontSize: '13px' }}>
-                    Subscribe
-                  </button>
-                </form>
-              )}
+              <p className="footer__newsletter-label">Habla con nosotros</p>
+              <button className="footer__newsletter-btn" onClick={buttonClick}>
+                Contáctanos
+              </button>
             </div>
 
             {/* Social */}
             <div className="footer__social">
               {[
-                { label: 'LinkedIn', icon: 'in', href: '#' },
-                { label: 'Facebook', icon: 'f', href: '#' },
-                { label: 'Instagram', icon: '◎', href: '#' },
+                { label: 'Instagram', img: '/images/IgIconLogo.png', href: 'https://www.instagram.com/cedimaipscol?igsh=MWRuZWxzN2JqeHBwNw==' },
               ].map(s => (
-                <a key={s.label} href={s.href} className="footer__social-icon" aria-label={s.label}>
-                  {s.icon}
+                <a key={s.label} target="_blank" rel="noopener noreferrer" href={s.href} className="footer__social-icon" aria-label={s.label}>
+                  {s.img ? (
+                    <img src={s.img} alt={s.label} style={{ width: '18px', height: '18px', objectFit: 'contain' }} />
+                  ) : (
+                    s.icon
+                  )}
                 </a>
               ))}
             </div>
@@ -130,9 +100,9 @@ export default function Footer() {
 
         {/* Bottom row */}
         <div className="footer__bottom">
-          <p className="footer__copy">© 2026 CarePath Co. All rights reserved.</p>
+          <p className="footer__copy">© 2026 Cedima SAS Todos los derechos reservados</p>
           <div className="footer__legal">
-            {['Terms', 'Privacy', 'Security', 'Cookie Policy', 'Notice of Privacy Practices'].map(l => (
+            {['Términos', 'Privacidad', 'Seguridad', 'Política de Cookies'].map(l => (
               <a key={l} href="#" className="footer__legal-link">{l}</a>
             ))}
           </div>

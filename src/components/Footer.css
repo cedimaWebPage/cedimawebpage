@@ -64,6 +64,24 @@
   color: var(--green-200);
 }
 
+.footer__newsletter-btn {
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: var(--green-500);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 500;
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s ease;
+  white-space: nowrap;
+}
+
+.footer__newsletter-btn:hover {
+  background: var(--green-600);
+}
+
 /* Social */
 .footer__social {
   display: flex;
