@@ -7,7 +7,6 @@ const FOOTER_LINKS = [
     links: [
       { label: 'Employers', href: '#employers' },
       { label: 'Health Plans', href: '#health-plans' },
-      { label: 'Consultants', href: '#consultants' },
       { label: 'Individuals', href: '#individuals' },
     ],
   },
