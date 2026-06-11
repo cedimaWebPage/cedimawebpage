@@ -13,7 +13,7 @@ import PaqueteMedico from './pages/PaqueteMedico'
 import PaqueteVIP from './pages/PaqueteVIP'
 import PaqueteElite from './pages/PaqueteElite'
 import Radiologia from './pages/Radiologia'
-import Dermatologia from './pages/Dermatologia'
+import ConsultaEspecializada from './pages/ConsultaEspecializada'
 import Optometria from './pages/Optometria'
 import CirugiaProgamada from './pages/CirugiaProgramada.jsx'
 import Ginecologia from './pages/Ginecologia.jsx'
@@ -43,7 +43,7 @@ export default function App() {
           <Route path="/paquete-vip" element={<PaqueteVIP />} />
           <Route path="/paquete-elite" element={<PaqueteElite />} />
           <Route path="/servicios/radiologia" element={<Radiologia />} />
-          <Route path="/servicios/dermatologia" element={<Dermatologia />} />
+          <Route path="/servicios/consulta-especializada" element={<ConsultaEspecializada />} />
           <Route path="/servicios/optometria" element={<Optometria />} />
           <Route path="/servicios/cirugia-programada" element={<CirugiaProgamada/>} />
           <Route path="/servicios/ginecologia" element={<Ginecologia/>} />

@@ -39,7 +39,7 @@ const FAQS = [
   { q: '¿Puedo agendar una consulta sin tener un plan asistencial de salud de Cedima?', a: 'Sí. Puedes acceder a nuestras consultas de forma particular. Pero recuerda que con el Plan Cedima puedes obtener descuentos de hasta el 50% en todos nuestros servicios y cuidar tu salud pagando menos.' },
 ]
 
-export default function Dermatologia() {
+export default function ConsultaEspecializada() {
   React.useEffect(() => { window.scrollTo(0, 0) }, [])
   return (
     <>

@@ -23,7 +23,7 @@ const NAV_LINKS = [
     label: 'Servicios',
     children: [
       { label: 'Imágenes Diagnósticas', href: '/servicios/radiologia' },
-      { label: 'Consulta Especializada', href: '/servicios/dermatologia'},
+      { label: 'Consulta Especializada', href: '/servicios/consulta-especializada' },
       { label: 'Procedimientos', href: '/servicios/optometria' },
       { label: 'Ginecologia', href: '/servicios/ginecologia' },
       { label: 'Cirugia Programada', href: '/servicios/cirugia-programada'},
