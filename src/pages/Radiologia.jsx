@@ -143,8 +143,8 @@ Beneficios destacados</p>
             <p className="pkg-cta__sub">Agenda tu cita hoy y recibe tus resultados en 24 horas hábiles, sin largas esperas.</p>
           </div>
           <div className="pkg-cta__actions">
-            <a href="tel:+57000000000" className="btn btn-white">Llamar ahora</a>
-            <a href="https://wa.me/57000000000" className="btn btn-ghost">WhatsApp</a>
+            <a href="tel:+573152591449" className="btn btn-white">Llamar ahora</a>
+            <a href="https://wa.me/573152591449" className="btn btn-ghost">WhatsApp</a>
           </div>
         </div>
       </div>

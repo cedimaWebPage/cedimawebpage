@@ -143,8 +143,8 @@ export default function Ginecologia() {
             <p className="pkg-cta__sub">Agenda tu valoración para cirugías programadas con especialistas certificados y acompañamiento profesional en cada etapa del proceso.</p>
           </div>
           <div className="pkg-cta__actions">
-            <a href="tel:+57000000000" className="btn btn-white">Llamar ahora</a>
-            <a href="https://wa.me/57000000000" className="btn btn-ghost">WhatsApp</a>
+            <a href="tel:+573152591449" className="btn btn-white">Llamar ahora</a>
+            <a href="https://wa.me/573152591449" className="btn btn-ghost">WhatsApp</a>
           </div>
         </div>
       </div>

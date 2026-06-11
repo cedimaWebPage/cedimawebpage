@@ -180,8 +180,8 @@ export default function PaqueteElite() {
             <p className="pkg-cta__sub">Accede al Plan Elite con cobertura completa y financiación desde $78.000 al mes.</p>
           </div>
           <div className="pkg-cta__actions">
-            <a href="tel:+57000000000" className="btn btn-white">Llamar ahora</a>
-            <a href="https://wa.me/57000000000" className="btn btn-ghost">WhatsApp</a>
+            <a href="tel:+573152591449" className="btn btn-white">Llamar ahora</a>
+            <a href="https://wa.me/573152591449" className="btn btn-ghost">WhatsApp</a>
           </div>
         </div>
       </div>

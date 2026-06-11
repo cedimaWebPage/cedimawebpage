@@ -151,8 +151,8 @@ En Cedima IPS te ofrecemos consultas especializadas con atención ágil, cercana
             <p className="pkg-cta__sub">Consulta con especialistas en Cedima IPS y recibe la orientación que necesitas sin largas esperas.</p>
           </div>
           <div className="pkg-cta__actions">
-            <a href="tel:+57000000000" className="btn btn-white">Llamar ahora</a>
-            <a href="https://wa.me/57000000000" className="btn btn-ghost">WhatsApp</a>
+            <a href="tel:+573152591449" className="btn btn-white">Llamar ahora</a>
+            <a href="https://wa.me/573152591449" className="btn btn-ghost">WhatsApp</a>
           </div>
         </div>
       </div>
