@@ -1,54 +1,62 @@
-import React, { useState, useEffect } from 'react'
-import { href, Link } from 'react-router-dom'
-import './Navbar.css'
+import React, { useState, useEffect } from "react";
+import { href, Link } from "react-router-dom";
+import "./Navbar.css";
 
 const NAV_LINKS = [
   {
-    label: '¿Por qué Cedima?',
+    label: "¿Por qué Cedima?",
     children: [
-      { label: 'Nosotros', href: '/' },
-      { label: 'Precios', href: '#programs' },
+      { label: "Nosotros", href: "/" },
+      { label: "Precios", href: "#programs" },
     ],
   },
   {
-    label: 'Programas',
+    label: "Programas",
     children: [
-      { label: 'Plan Asistencial Familiar', href: 'paquete-familiar' },
-      { label: 'Plan Asistencial Individual', href: 'paquete-medico' },
-      { label: 'Plan Asistencial Integral', href: 'paquete-vip' },
-      { label: 'Plan Asistencial de Salud Elite', href: 'paquete-elite' },
+      { label: "Plan Asistencial Familiar", href: "/paquete-familiar" },
+      { label: "Plan Asistencial Individual", href: "/paquete-medico" },
+      { label: "Plan Asistencial Integral", href: "/paquete-vip" },
+      { label: "Plan Asistencial de Salud Elite", href: "/paquete-elite" },
     ],
   },
   {
-    label: 'Servicios',
+    label: "Servicios",
     children: [
-      { label: 'Imágenes Diagnósticas', href: '/servicios/radiologia' },
-      { label: 'Consulta Especializada', href: '/servicios/consulta-especializada' },
-      { label: 'Procedimientos', href: '/servicios/optometria' },
-      { label: 'Ginecologia', href: '/servicios/ginecologia' },
-      { label: 'Cirugia Programada', href: '/servicios/cirugia-programada'},
-
+      { label: "Imágenes Diagnósticas", href: "/servicios/radiologia" },
+      {
+        label: "Consulta Especializada",
+        children: [
+          { label: "Procedimientos", href: "/servicios/Procedimientos" },
+          { label: "Ginecologia", href: "/servicios/ginecologia" },
+        ],
+      },
+      { label: "Cirugia Programada", href: "/servicios/cirugia-programada" },
     ],
-  }
-]
+  },
+];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
-  const [open, setOpen] = useState(null)
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16)
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+    const onScroll = () => setScrolled(window.scrollY > 16);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
+    <header className={`navbar${scrolled ? " navbar--scrolled" : ""}`}>
       <div className="navbar__inner container">
         {/* Logo */}
         <a className="navbar__logo">
-          <img src="\images\cedimaLogo.jpg" alt="Cedima IPS" height="40" style={{ width: 'auto' }} />
+          <img
+            src="\images\cedimaLogo.jpg"
+            alt="Cedima IPS"
+            height="40"
+            style={{ width: "auto" }}
+          />
           <span className="navbar__brand">Cedima IPS</span>
         </a>
 
@@ -58,46 +66,99 @@ export default function Navbar() {
             link.children ? (
               <div
                 key={link.label}
-                className={`navbar__item navbar__item--dropdown${open === link.label ? ' is-open' : ''}`}
+                className={`navbar__item navbar__item--dropdown${open === link.label ? " is-open" : ""}`}
                 onMouseEnter={() => setOpen(link.label)}
               >
                 <button className="navbar__link">
                   {link.label}
-                  <svg width="12" height="12" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round"/></svg>
+                  <svg width="12" height="12" viewBox="0 0 12 12">
+                    <path
+                      d="M2 4l4 4 4-4"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      fill="none"
+                      strokeLinecap="round"
+                    />
+                  </svg>
                 </button>
                 <div className="navbar__dropdown">
-                  {link.children.map((c) => (
-                    c.href.startsWith('/') ? (
-                      <Link key={c.label} to={c.href} className="navbar__dropdown-link">
+                  {link.children.map((c) =>
+                    c.children ? (
+                      <div key={c.label} className="navbar__nested-item">
+                        <button className="navbar__dropdown-link navbar__dropdown-link--has-children">
+                          {c.label}
+                          <svg width="12" height="12" viewBox="0 0 12 12">
+                            <path
+                              d="M4 2l4 4-4 4"
+                              stroke="currentColor"
+                              strokeWidth="1.5"
+                              fill="none"
+                              strokeLinecap="round"
+                            />
+                          </svg>
+                        </button>
+                        <div className="navbar__nested-dropdown">
+                          {c.children.map((sub) =>
+                            sub.href.startsWith("/") ? (
+                              <Link
+                                key={sub.label}
+                                to={sub.href}
+                                className="navbar__dropdown-link"
+                              >
+                                {sub.label}
+                              </Link>
+                            ) : (
+                              <a
+                                key={sub.label}
+                                href={sub.href}
+                                className="navbar__dropdown-link"
+                              >
+                                {sub.label}
+                              </a>
+                            ),
+                          )}
+                        </div>
+                      </div>
+                    ) : c.href.startsWith("/") ? (
+                      <Link
+                        key={c.label}
+                        to={c.href}
+                        className="navbar__dropdown-link"
+                      >
                         {c.label}
                       </Link>
                     ) : (
-                      <a key={c.label} href={c.href} className="navbar__dropdown-link">
+                      <a
+                        key={c.label}
+                        href={c.href}
+                        className="navbar__dropdown-link"
+                      >
                         {c.label}
                       </a>
-                    )
-                  ))}
+                    ),
+                  )}
                 </div>
               </div>
             ) : (
               <a key={link.label} href={link.href} className="navbar__link">
                 {link.label}
               </a>
-            )
+            ),
           )}
         </nav>
 
         {/* CTAs */}
-        <div className="navbar__ctas">
-        </div>
+        <div className="navbar__ctas"></div>
 
         {/* Mobile burger */}
         <button
-          className={`navbar__burger${mobileOpen ? ' is-open' : ''}`}
+          className={`navbar__burger${mobileOpen ? " is-open" : ""}`}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
-          <span /><span /><span />
+          <span />
+          <span />
+          <span />
         </button>
       </div>
 
@@ -108,26 +169,41 @@ export default function Navbar() {
             link.children ? (
               <div key={link.label} className="navbar__mobile-group">
                 <span className="navbar__mobile-label">{link.label}</span>
-                {link.children.map((c) => (
-                  c.href.startsWith('/') ? (
-                    <Link key={c.label} to={c.href} className="navbar__mobile-link" onClick={() => setMobileOpen(false)}>
+                {link.children.map((c) =>
+                  c.href.startsWith("/") ? (
+                    <Link
+                      key={c.label}
+                      to={c.href}
+                      className="navbar__mobile-link"
+                      onClick={() => setMobileOpen(false)}
+                    >
                       {c.label}
                     </Link>
                   ) : (
-                    <a key={c.label} href={c.href} className="navbar__mobile-link" onClick={() => setMobileOpen(false)}>
+                    <a
+                      key={c.label}
+                      href={c.href}
+                      className="navbar__mobile-link"
+                      onClick={() => setMobileOpen(false)}
+                    >
                       {c.label}
                     </a>
-                  )
-                ))}
+                  ),
+                )}
               </div>
             ) : (
-              <a key={link.label} href={link.href} className="navbar__mobile-link" onClick={() => setMobileOpen(false)}>
+              <a
+                key={link.label}
+                href={link.href}
+                className="navbar__mobile-link"
+                onClick={() => setMobileOpen(false)}
+              >
                 {link.label}
               </a>
-            )
+            ),
           )}
         </div>
       )}
     </header>
-  )
+  );
 }

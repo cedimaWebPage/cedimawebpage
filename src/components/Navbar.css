@@ -6,6 +6,36 @@
   background: transparent;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
+
+.navbar__nested-item {
+  position: relative;
+}
+
+.navbar__nested-dropdown {
+  position: absolute;
+  top: 0;
+  left: 100%;             /* Pushes the menu cleanly out to the right */
+  min-width: 200px;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 6px;
+  margin-left: 4px;       /* Adds a tiny gap between the menus */
+  
+  /* Start hidden */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(8px);
+  transition: all 0.2s ease;
+}
+
+.navbar__nested-item:hover .navbar__nested-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
 .navbar--scrolled {
   background: rgba(255,255,255,0.97);
   box-shadow: 0 1px 0 rgba(0,0,0,0.06);
@@ -89,6 +119,17 @@
 .navbar__dropdown-link:hover {
   background: var(--green-50);
   color: var(--green-600);
+}
+
+.navbar__dropdown-link--has-children {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Pushes the chevron arrow to the far right */
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
 }
 
 /* CTAs */
