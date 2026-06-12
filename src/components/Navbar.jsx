@@ -24,10 +24,14 @@ const NAV_LINKS = [
     children: [
       { label: "Imágenes Diagnósticas", href: "/servicios/radiologia" },
       {
-        label: "Consulta Especializada",
+        label: "Servicios Especializados",
         children: [
           { label: "Procedimientos", href: "/servicios/Procedimientos" },
           { label: "Ginecologia", href: "/servicios/ginecologia" },
+          {
+            label: "Consulta Especializada",
+            href: "/servicios/consulta-especializada",
+          },
         ],
       },
       { label: "Cirugia Programada", href: "/servicios/cirugia-programada" },
@@ -50,7 +54,7 @@ export default function Navbar() {
     <header className={`navbar${scrolled ? " navbar--scrolled" : ""}`}>
       <div className="navbar__inner container">
         {/* Logo */}
-        <a className="navbar__logo">
+        <a className="navbar__logo" href="https://www.cedimaips.com/">
           <img
             src="\images\cedimaLogo.jpg"
             alt="Cedima IPS"
@@ -169,29 +173,66 @@ export default function Navbar() {
             link.children ? (
               <div key={link.label} className="navbar__mobile-group">
                 <span className="navbar__mobile-label">{link.label}</span>
-                {link.children.map((c) =>
-                  c.href.startsWith("/") ? (
-                    <Link
-                      key={c.label}
-                      to={c.href}
-                      className="navbar__mobile-link"
-                      onClick={() => setMobileOpen(false)}
-                    >
-                      {c.label}
-                    </Link>
-                  ) : (
-                    <a
-                      key={c.label}
-                      href={c.href}
-                      className="navbar__mobile-link"
-                      onClick={() => setMobileOpen(false)}
-                    >
-                      {c.label}
-                    </a>
-                  ),
-                )}
+
+                {link.children.map((c) => (
+                  <div key={c.label} className="navbar__mobile-item-wrapper">
+                    {/* Tier 2: Check if it has sub-children */}
+                    {c.children ? (
+                      <>
+                        {/* Non-clickable label header for things like "Consulta Especializada" */}
+                        <span className="navbar__mobile-link navbar__mobile-link--has-children">
+                          {c.label}
+                        </span>
+
+                        {/* Tier 3: Render the nested sub-children directly beneath it */}
+                        <div className="navbar__mobile-nested-group">
+                          {c.children.map((sub) =>
+                            sub.href.startsWith("/") ? (
+                              <Link
+                                key={sub.label}
+                                to={sub.href}
+                                className="navbar__mobile-link navbar__mobile-link--nested"
+                                onClick={() => setMobileOpen(false)}
+                              >
+                                {sub.label}
+                              </Link>
+                            ) : (
+                              <a
+                                key={sub.label}
+                                href={sub.href}
+                                className="navbar__mobile-link navbar__mobile-link--nested"
+                                onClick={() => setMobileOpen(false)}
+                              >
+                                {sub.label}
+                              </a>
+                            ),
+                          )}
+                        </div>
+                      </>
+                    ) : c.href.startsWith("/") ? (
+                      /* Regular Tier 2 Internal Link */
+                      <Link
+                        to={c.href}
+                        className="navbar__mobile-link"
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        {c.label}
+                      </Link>
+                    ) : (
+                      /* Regular Tier 2 External Link */
+                      <a
+                        href={c.href}
+                        className="navbar__mobile-link"
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        {c.label}
+                      </a>
+                    )}
+                  </div>
+                ))}
               </div>
             ) : (
+              /* Top Level Link with no children */
               <a
                 key={link.label}
                 href={link.href}

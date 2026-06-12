@@ -177,6 +177,16 @@
   color: var(--text-soft);
   padding: 12px 0 4px;
 }
+
+.navbar__mobile-nested-group {
+  padding-left: 16px; /* Indents Tier 3 options */
+  border-left: 1px solid var(--green-100);
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .navbar__mobile-link {
   display: block;
   padding: 10px 8px;
@@ -185,6 +195,12 @@
   border-radius: var(--radius-sm);
 }
 .navbar__mobile-link:hover { background: var(--green-50); }
+
+.navbar__mobile-link--has-children {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
 .navbar__mobile-ctas {
   display: flex;
   flex-direction: column;
