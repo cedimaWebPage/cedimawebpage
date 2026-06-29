@@ -1,5 +1,5 @@
-import React from 'react'
-import './Hero.css'
+import React from "react";
+import "./Hero.css";
 
 export default function Hero() {
   return (
@@ -14,12 +14,16 @@ export default function Hero() {
         <div className="hero__content anim-fadeup">
           <span className="tag">Conoce nuestros beneficios</span>
           <h1 className="hero__title">
-            Cuidamos lo más valioso, {' '}
+            Cuidamos lo más valioso,{" "}
             <span className="hero__title-em">tu salud</span>
           </h1>
           <p className="hero__sub">
-            Conoce nuestros beneficios y encuentra el paquete que se ajuste a tus necesidades.
-          </p> 
+            Conoce nuestros beneficios y encuentra el paquete que se ajuste a
+            tus necesidades.
+          </p>
+          <a className="hero__btn" href="tel:3330333000">
+            Llamanos ya al 3330333000
+          </a>
         </div>
 
         <div className="hero__visual anim-fadeup anim-delay-2">
@@ -29,20 +33,36 @@ export default function Hero() {
               <div className="hero__card-header">
                 <div className="hero__avatar">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <circle cx="12" cy="8" r="4" stroke="#1d7a4a" strokeWidth="1.8"/>
-                    <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#1d7a4a" strokeWidth="1.8" strokeLinecap="round"/>
+                    <circle
+                      cx="12"
+                      cy="8"
+                      r="4"
+                      stroke="#1d7a4a"
+                      strokeWidth="1.8"
+                    />
+                    <path
+                      d="M4 20c0-4 3.6-7 8-7s8 3 8 7"
+                      stroke="#1d7a4a"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                    />
                   </svg>
                 </div>
                 <div>
                   <p className="hero__card-name">Dra. Catalina Garcia</p>
-                  <p className="hero__card-role">Especialista en Medicina Interna</p>
+                  <p className="hero__card-role">
+                    Especialista en Medicina Interna
+                  </p>
                 </div>
                 <span className="hero__online-dot" />
               </div>
               <p className="hero__card-msg">
-                "Tus resultados están listos. Podemos agendar tu control esta misma semana."
+                "Tus resultados están listos. Podemos agendar tu control esta
+                misma semana."
               </p>
-              <div className="hero__card-time">📍 Citas médicas ágiles en Cali</div>
+              <div className="hero__card-time">
+                📍 Citas médicas ágiles en Cali
+              </div>
             </div>
 
             {/* Floating stat card */}
@@ -66,5 +86,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }
