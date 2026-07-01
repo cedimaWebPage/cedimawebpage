@@ -5,10 +5,7 @@ import "./Navbar.css";
 const NAV_LINKS = [
   {
     label: "¿Por qué Cedima?",
-    children: [
-      { label: "Nosotros", href: "/" },
-      { label: "Precios", href: "#programs" },
-    ],
+    children: [{ label: "Nosotros", href: "/" }],
   },
   {
     label: "Programas",
@@ -26,7 +23,7 @@ const NAV_LINKS = [
       {
         label: "Servicios Especializados",
         children: [
-          { label: "Procedimientos", href: "/servicios/Procedimientos" },
+          { label: "Procedimientos", href: "/servicios/procedimientos" },
           { label: "Ginecologia", href: "/servicios/ginecologia" },
           {
             label: "Consulta Especializada",

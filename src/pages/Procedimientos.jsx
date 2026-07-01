@@ -1,118 +1,126 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Procedimientos.css";
-import FAQ from "./FAQ";
 
 const BENEFITS = [
   {
-    icon: "🌸",
-    bg: "#fde8ee",
-    title: "Consulta ginecológica",
-    desc: "Valoración especializada para prevención, diagnóstico y seguimiento de la salud femenina.",
+    icon: "🩹",
+    bg: "#d0f4ea",
+    title: "Curaciones y suturas",
+    desc: "Atención de heridas, laceraciones y quemaduras menores con técnicas de asepsia estricta y materiales de primera calidad.",
   },
   {
-    icon: "🤰",
-    bg: "#d0f4ea",
-    title: "Control prenatal",
-    desc: "Acompañamiento durante el embarazo con controles, ecografías y seguimiento profesional.",
+    icon: "💉",
+    bg: "#d4f0df",
+    title: "Infiltraciones y aplicaciones",
+    desc: "Infiltraciones de corticoides, ácido hialurónico y aplicación de medicamentos inyectables de forma segura y controlada.",
+  },
+  {
+    icon: "🔪",
+    bg: "#fde8ee",
+    title: "Procedimientos menores en piel",
+    desc: "Extracción de quistes sebáceos, lipomas, verrugas, lunares benignos y cuerpos extraños superficiales bajo anestesia local.",
+  },
+  {
+    icon: "🩺",
+    bg: "#ede9fe",
+    title: "Drenaje de abscesos",
+    desc: "Drenaje y manejo de abscesos cutáneos y subcutáneos con seguimiento posterior hasta la resolución completa.",
   },
   {
     icon: "🧪",
-    bg: "#d4f0df",
-    title: "Citología cervicovaginal",
-    desc: "Examen preventivo para detección temprana y control de la salud cervical.",
+    bg: "#fef9c3",
+    title: "Toma de muestras",
+    desc: "Toma de biopsias de piel, frotis, cultivos y otras muestras para análisis de laboratorio con resultados oportunos.",
+  },
+  {
+    icon: "🫀",
+    bg: "#dbeafe",
+    title: "Electrocardiograma",
+    desc: "Registro de la actividad eléctrica del corazón para diagnóstico de arritmias, infartos y otras afecciones cardíacas.",
+  },
+  {
+    icon: "🩻",
+    bg: "#e0f7ef",
+    title: "Retiro de puntos y férulas",
+    desc: "Retiro de suturas, puntos, vendajes especiales y férulas con revisión del proceso de cicatrización.",
   },
   {
     icon: "💊",
-    bg: "#ede9fe",
-    title: "Planificación familiar",
-    desc: "Asesoría personalizada en métodos anticonceptivos y salud reproductiva.",
+    bg: "#fef3c7",
+    title: "Nebulizaciones",
+    desc: "Tratamiento de afecciones respiratorias mediante nebulización con broncodilatadores y solución salina bajo supervisión médica.",
   },
   {
-    icon: "✨",
-    bg: "#fef9c3",
-    title: "Menopausia y climaterio",
-    desc: "Manejo y acompañamiento de cambios hormonales y síntomas de menopausia.",
-  },
-  {
-    icon: "🔎",
-    bg: "#e0f7ef",
-    title: "Colposcopía",
-    desc: "Evaluación especializada del cuello uterino para seguimiento y prevención ginecológica.",
+    icon: "🔬",
+    bg: "#fde8ee",
+    title: "Cauterización de lesiones",
+    desc: "Eliminación de verrugas, pólipos y otras lesiones benignas mediante cauterización química o eléctrica.",
   },
 ];
 
 const SERVICES = [
   {
-    servicio: "Consulta ginecológica general",
-    tiempo: "30 min",
+    servicio: "Curación simple de heridas",
+    tiempo: "20 min",
     descuento: "Hasta 50%",
   },
   {
-    servicio: "Citología cervicovaginal",
-    tiempo: "20 min",
-    descuento: "Hasta 35%",
+    servicio: "Sutura de laceraciones",
+    tiempo: "30 min",
+    descuento: "Hasta 45%",
   },
-  { servicio: "Control prenatal", tiempo: "30 min", descuento: "Hasta 40%" },
+  { servicio: "Retiro de puntos", tiempo: "15 min", descuento: "Hasta 50%" },
+  { servicio: "Drenaje de absceso", tiempo: "30 min", descuento: "Hasta 45%" },
   {
-    servicio: "Ecografía obstétrica",
+    servicio: "Extracción de quiste sebáceo",
+    tiempo: "45 min",
+    descuento: "Hasta 40%",
+  },
+  {
+    servicio: "Extracción de cuerpo extraño",
+    tiempo: "30 min",
+    descuento: "Hasta 45%",
+  },
+  {
+    servicio: "Infiltración de corticoides",
+    tiempo: "20 min",
+    descuento: "Hasta 40%",
+  },
+  {
+    servicio: "Cauterización de lesiones",
     tiempo: "30 min",
     descuento: "Hasta 40%",
   },
-  { servicio: "Colposcopía", tiempo: "30 min", descuento: "Hasta 40%" },
-  { servicio: "Inserción de DIU", tiempo: "30 min", descuento: "Hasta 40%" },
+  { servicio: "Electrocardiograma", tiempo: "20 min", descuento: "Hasta 50%" },
+  { servicio: "Nebulización", tiempo: "20 min", descuento: "Hasta 45%" },
   {
-    servicio: "Consulta de menopausia",
-    tiempo: "40 min",
-    descuento: "Hasta 35%",
-  },
-  { servicio: "Biopsia endometrial", tiempo: "30 min", descuento: "Hasta 35%" },
-];
-
-const FAQS = [
-  {
-    q: "¿Desde qué edad debo visitar al ginecólogo?",
-    a: "La primera consulta ginecológica se recomienda entre los 13 y 15 años, o al iniciar la vida sexual. A partir de los 21 años, es importante realizar controles periódicos y citología según la orientación del especialista.",
+    servicio: "Toma de biopsia de piel",
+    tiempo: "30 min",
+    descuento: "Hasta 40%",
   },
   {
-    q: "¿Cómo debo prepararme para la consulta ginecológica?",
-    a: "Para una consulta general no necesitas una preparación especial. Si vas a realizarte una citología, evita relaciones sexuales, cremas vaginales o duchas vaginales 48 horas antes, y procura no estar en tu periodo menstrual.",
-  },
-  {
-    q: "¿Con qué frecuencia debo hacerme la citología?",
-    a: "Se recomienda una vez al año para mujeres entre 21 y 65 años. Si tienes resultados normales continuos, tu ginecólogo puede indicar realizarla cada 3 años con citología sola o cada 5 años con cotesting (citología más VPH).",
-  },
-  {
-    q: "¿Puedo acceder a servicios ginecológicos sin EPS?",
-    a: "Sí. En Cedima IPS puedes acceder a consultas y procedimientos ginecológicos de forma particular, sin largas esperas ni trámites complicados.",
-  },
-  {
-    q: "¿Atienden partos en Cedima?",
-    a: "No. Actualmente en Cedima IPS no realizamos atención de partos. Sin embargo, contamos con consultas ginecológicas, controles prenatales y procedimientos especializados para el cuidado de la salud femenina.",
+    servicio: "Aplicación de inyectables",
+    tiempo: "15 min",
+    descuento: "Hasta 50%",
   },
 ];
 
-export default function Ginecologia() {
+export default function Procedimientos() {
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
-      <section
-        className="pkg-hero"
-        style={{
-          background:
-            "linear-gradient(135deg, #fff1f2 0%, #faf8f3 60%, #f0faf4 100%)",
-        }}
-      >
+      <section className="pkg-hero section--cream">
         <div className="pkg-hero__bg">
           <div
             className="pkg-hero__blob pkg-hero__blob--1"
-            style={{ background: "#fda4af" }}
+            style={{ background: "#a8e0bf" }}
           />
           <div
             className="pkg-hero__blob pkg-hero__blob--2"
-            style={{ background: "#a8e0bf" }}
+            style={{ background: "#d4f0df" }}
           />
         </div>
         <div className="container">
@@ -133,50 +141,41 @@ export default function Ginecologia() {
               <div className="pkg-hero__badge">
                 <div
                   className="pkg-hero__icon"
-                  style={{ background: "#fde8ee" }}
+                  style={{ background: "#d0f4ea" }}
                 >
-                  🌸
+                  🩹
                 </div>
-                <span
-                  className="tag"
-                  style={{ background: "#fde8ee", color: "#9f1239" }}
-                >
-                  Servicio
-                </span>
+                <span className="tag">Servicio</span>
               </div>
               <h1 className="pkg-hero__title">
-                <em>Ginecología</em> y Salud Femenina
+                <em>Procedimientos</em> Médicos Menores
               </h1>
               <p className="pkg-hero__desc">
-                Te acompañamos con una atención ginecológica clara, humana y
-                profesional, pensada para cuidar tu bienestar desde la
-                adolescencia hasta la menopausia.
+                Atención oportuna para procedimientos ambulatorios de baja
+                complejidad. Contamos con el personal y los equipos necesarios
+                para realizar curaciones, suturas, infiltraciones, drenajes y
+                más, con la seguridad y calidad que mereces.
               </p>
               <div className="pkg-hero__actions">
                 <a href="#contacto" className="btn btn-primary">
-                  Agendar consulta
+                  Agendar cita
                 </a>
                 <a href="#servicios" className="btn btn-outline">
-                  Ver servicios
+                  Ver procedimientos
                 </a>
               </div>
             </div>
-            <div className="pkg-price-card" style={{ borderColor: "#fda4af" }}>
+            <div className="pkg-price-card">
               <div className="pkg-price-card__header">
                 <span className="pkg-price-card__label">
                   Descuento con plan Cedima
                 </span>
-                <span
-                  className="pkg-price-card__badge tag"
-                  style={{ background: "#fde8ee", color: "#9f1239" }}
-                >
-                  Miembros
-                </span>
+                <span className="pkg-price-card__badge tag">Miembros</span>
               </div>
               <div className="pkg-price-card__amount">
                 <span
                   className="pkg-price-card__number"
-                  style={{ fontSize: "2.5rem", color: "#9f1239" }}
+                  style={{ fontSize: "2.5rem" }}
                 >
                   Hasta 50%
                 </span>
@@ -184,21 +183,19 @@ export default function Ginecologia() {
               <div className="pkg-price-card__divider" />
               <p className="pkg-price-card__includes">Destacados</p>
               {[
-                "Atención ginecológica integral",
-                "Prevención y diagnóstico femenino",
-                "Seguimiento prenatal especializado",
-                "Salud hormonal y menopausia",
-                "Beneficios exclusivos con Plan Cedima",
+                "Curaciones y suturas",
+                "Drenaje de abscesos",
+                "Procedimientos menores en piel",
+                "Electrocardiograma",
+                "Nebulizaciones y aplicación de inyectables",
+                "Toma de biopsias",
               ].map((f) => (
                 <div key={f} className="pkg-price-card__feature">
-                  <div
-                    className="pkg-price-card__check"
-                    style={{ background: "#fde8ee" }}
-                  >
+                  <div className="pkg-price-card__check">
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
                       <path
                         d="M2 5l2.5 2.5 3.5-4"
-                        stroke="#9f1239"
+                        stroke="var(--green-600)"
                         strokeWidth="1.4"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -222,13 +219,14 @@ export default function Ginecologia() {
 
       <section className="pkg-section">
         <div className="container">
-          <p className="pkg-section__label">Nuestros servicios</p>
+          <p className="pkg-section__label">Nuestros procedimientos</p>
           <h2 className="pkg-section__title">
-            Salud femenina en cada etapa de tu vida
+            Atención ambulatoria rápida y segura
           </h2>
           <p className="pkg-section__sub">
-            Atención ginecológica completa con enfoque preventivo, diagnóstico y
-            de bienestar para mujeres de todas las edades.
+            Realizamos procedimientos menores con altos estándares de asepsia,
+            personal capacitado y seguimiento post-procedimiento para garantizar
+            tu recuperación.
           </p>
           <div className="pkg-benefits">
             {BENEFITS.map((b) => (
@@ -250,16 +248,16 @@ export default function Ginecologia() {
       <section className="pkg-section pkg-section--alt" id="servicios">
         <div className="container">
           <p className="pkg-section__label">Tarifas</p>
-          <h2 className="pkg-section__title">Servicios disponibles</h2>
+          <h2 className="pkg-section__title">Procedimientos disponibles</h2>
           <p className="pkg-section__sub">
-            Consulta nuestros servicios ginecológicos y accede a beneficios
-            especiales con el Plan Cedima.
+            Todos los procedimientos con descuentos exclusivos para miembros de
+            los planes Cedima.
           </p>
           <div className="pkg-table-wrap">
             <table className="pkg-table">
               <thead>
                 <tr>
-                  <th>Servicio</th>
+                  <th>Procedimiento</th>
                   <th>Duración aprox.</th>
                   <th>Descuento miembros</th>
                 </tr>
@@ -283,11 +281,10 @@ export default function Ginecologia() {
       <section className="pkg-section">
         <div className="container">
           <p className="pkg-section__label">Preguntas frecuentes</p>
-          <h2 className="pkg-section__title">Estamos para orientarte</h2>
+          <h2 className="pkg-section__title">Resolvemos tus dudas</h2>
           <p className="pkg-section__sub">
-            Información importante antes de tu consulta ginecológica.
+            Todo lo que necesitas saber antes de tu procedimiento en Cedima.
           </p>
-          <FAQ items={FAQS} />
         </div>
       </section>
 
@@ -295,18 +292,21 @@ export default function Ginecologia() {
         <div className="pkg-cta">
           <div className="pkg-cta__text">
             <h3 className="pkg-cta__title">
-              Tu salud merece atención especializada 💖
+              ¿Necesitas un procedimiento menor?
             </h3>
             <p className="pkg-cta__sub">
-              Agenda tu consulta ginecológica con un equipo profesional que te
-              acompaña en cada etapa.
+              Agenda tu cita hoy y recibe atención oportuna con descuentos
+              exclusivos para miembros Cedima.
             </p>
           </div>
           <div className="pkg-cta__actions">
             <a href="tel:+573330333000" className="btn btn-white">
               Llamar ahora al (333)-033-3000
             </a>
-            <a href="https://wa.me/573152591449" className="btn btn-ghost">
+            <a
+              href="https://web.whatsapp.com/send/?phone=573152591449&text&type=phone_number&app_absent=0"
+              className="btn btn-ghost"
+            >
               WhatsApp
             </a>
           </div>

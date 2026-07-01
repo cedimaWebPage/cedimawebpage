@@ -21,7 +21,7 @@ export default function Hero() {
             Conoce nuestros beneficios y encuentra el paquete que se ajuste a
             tus necesidades.
           </p>
-          <a className="hero__btn" href="tel:3330333000">
+          <a className="call__btn" href="tel:+573330333000">
             Llamanos ya al 3330333000
           </a>
         </div>
