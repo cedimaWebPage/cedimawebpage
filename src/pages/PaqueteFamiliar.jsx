@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Procedimientos.css";
 import FAQ from "./FAQ";
+import { MERCADOPAGO_LINKS } from "../config/mercadopagoLinks";
 
 const BENEFITS = [
   {
@@ -278,6 +279,14 @@ export default function PaqueteFamiliar() {
             </p>
           </div>
           <div className="pkg-cta__actions">
+            <a
+              href={MERCADOPAGO_LINKS.familiar}
+              className="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Paga con un 10% de descuento ya
+            </a>
             <a href="tel:+573330333000" className="btn btn-white">
               Llamar ahora al (333)-033-3000
             </a>
