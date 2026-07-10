@@ -15,7 +15,6 @@ const FOOTER_LINKS = [
     heading: "Compañía",
     links: [
       { label: "Nosotros", href: "#about" },
-      { label: "Trabaja con nosotros", href: "#careers", badge: "Disponible" },
       { label: "Precios", href: "#pricing" },
     ],
   },
