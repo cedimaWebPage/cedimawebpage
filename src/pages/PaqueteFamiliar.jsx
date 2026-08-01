@@ -285,7 +285,7 @@ export default function PaqueteFamiliar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Paga con un 10% de descuento ya
+              Paga tu suscripción con un 10% de descuento ya
             </a>
             <a href="tel:+573330333000" className="btn btn-white">
               Llamar ahora al (333)-033-3000

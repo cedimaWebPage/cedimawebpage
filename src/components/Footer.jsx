@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Footer.css";
 
 const FOOTER_LINKS = [
@@ -21,12 +21,10 @@ const FOOTER_LINKS = [
 ];
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
 
   const buttonClick = () => {
     window.open(
-      "https://web.whatsapp.com/send/?phone=573152591449&text&type=phone_number&app_absent=0",
+      "https://wa.me/573152591449",
       "_blank",
       "noopener,noreferrer",
     );
@@ -40,7 +38,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="footer__brand">
             <a href="#" className="footer__logo">
-              <img src="images\cedimaLogo.jpg" className="footer__logo-img" />
+              <img src="images\cedimaLogo.jpg" className="footer__logo-img" alt="Logo de Cedima IPS" />
               <span className="footer__brand-name">Cedima IPS</span>
             </a>
             <p className="footer__tagline">
@@ -68,7 +66,7 @@ export default function Footer() {
                 {
                   label: "Instagram",
                   img: "/images/IgIconLogo.png",
-                  href: "https://www.instagram.com/cedimaipscol?igsh=MWRuZWxzN2JqeHBwNw==",
+                  href: "https://www.instagram.com/cedimaipscol/",
                 },
               ].map((s) => (
                 <a
